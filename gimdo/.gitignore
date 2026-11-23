@@ -1,0 +1,55 @@
+# Generated Netlify deploy bundle
+/dist/
+
+# Local Netlify state
+/.netlify/
+
+# Local development and task working files
+/.work/
+/node_modules/
+
+# Required excludes
+node_modules/
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+.turbo/
+vendor/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+.npmrc
+credentials.json
+service-account*.json
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+.netlify/
+.vercel/
+.wrangler/
+.npm-cache/
+.freebuff/
+.manus/
+.inspecta/
+.work/
+.preview/
+.cloud-attachments/
+.superpowers/
+.expo/
+.agents/
+.claude/
+.extract-design-system/
+.screenshots/
