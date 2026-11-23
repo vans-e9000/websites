@@ -1,0 +1,27 @@
+{
+  "name": "Mitete Construction and Civil Works Enterprises",
+  "short_name": "Mitete",
+  "description": "CRB registered Specialist Civil contractor, Class 3, delivering building, road, water and drainage works across Tanzania.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f3f2",
+  "theme_color": "#fb4f1f",
+  "icons": [
+    {
+      "src": "assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

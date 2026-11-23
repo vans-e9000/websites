@@ -1,0 +1,17 @@
+{
+  "name": "mitete-construction",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Mitete Construction and Civil Works Enterprises website",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scratch/serve.js",
+    "preview": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
+    "check": "node scripts/check.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

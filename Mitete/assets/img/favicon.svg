@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Mitete Construction mark">
+  <rect width="512" height="512" rx="112" fill="#fb4f1f"/>
+  <path d="M96 236 256 112l160 124v58L256 172 96 294z" fill="#ffffff"/>
+  <rect x="132" y="268" width="60" height="132" rx="6" fill="#ffffff"/>
+  <rect x="320" y="268" width="60" height="132" rx="6" fill="#ffffff"/>
+  <rect x="212" y="316" width="88" height="84" rx="6" fill="#ffffff" opacity="0.78"/>
+</svg>
