@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anelisainvestment.co.tz/sitemap.xml
+
+# Performance: serve WebP/AVIF when client supports it via Accept header
+# Vary: Accept should be set by server when content negotiation is used

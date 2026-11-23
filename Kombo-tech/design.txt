@@ -1,0 +1,870 @@
+# Imprint - Modern co-branded credit cards — Style Reference
+> Extracted 2026-10-28 from https://imprint.co/?ref=minimal.gallery
+
+**Theme:** light
+
+Imprint - Modern co-branded credit cards (imprint.co) reads as a light, layered interface built on a UniversalSans-500 Regular/sans-serif type pairing. Structurally it relies on fully-rounded pill shapes as its signature geometry, and soft shadows lift key surfaces off the canvas — with a restrained, near-monochrome accent strategy. Motion is measured and smooth, averaging 200ms on interactive transitions. Typography runs from 12px up to 116px across 6 steps, and the spacing system sits on a 4-unit base with 24px container padding.
+
+## Contents
+
+- [At a Glance](#at-a-glance)
+- [Tokens — Colors](#tokens-colors)
+- [Tokens — Typography](#tokens-typography)
+- [Tokens — Spacing & Shapes](#tokens-spacing-shapes)
+- [Effects & Treatments](#effects-treatments)
+- [Tokens — Motion](#tokens-motion)
+- [Design Token System](#design-token-system)
+- [Scroll & Reveal Motion](#scroll-reveal-motion)
+- [Micro-interactions](#micro-interactions)
+- [Component State Matrix](#component-state-matrix)
+- [Components](#components)
+- [Component API Sketch](#component-api-sketch)
+- [Starter Components](#starter-components)
+- [Do's and Don'ts](#dos-and-donts)
+- [Surfaces](#surfaces)
+- [Elevation](#elevation)
+- [Imagery](#imagery)
+- [Assets & Media](#assets-media)
+- [Layout](#layout)
+- [Page Blueprint](#page-blueprint)
+- [Grid & Composition](#grid-composition)
+- [Landing Page Anatomy](#landing-page-anatomy)
+- [Hero & Conversion](#hero-conversion)
+- [Signature Devices](#signature-devices)
+- [Content & Copy](#content-copy)
+- [Accessibility Profile](#accessibility-profile)
+- [Responsive](#responsive)
+- [Responsive Behaviour](#responsive-behaviour)
+- [Agent Prompt Guide](#agent-prompt-guide)
+- [Quick Start](#quick-start)
+- [Rebuild Checklist](#rebuild-checklist)
+- [Extraction Coverage](#extraction-coverage)
+- [Known Gaps](#known-gaps)
+
+## At a Glance
+
+The decisions that define this design. Everything below expands on these.
+
+| Aspect | Value |
+|--------|-------|
+| Theme | light, comfortable density |
+| Core colors | canvas `#efefef`, surface `#ffffff`, text `#000000` (18.3:1) |
+| Display type | UniversalSans-500 Regular 400, 116px / 0.9, -5.8px tracking |
+| Body type | UniversalSans-500 Regular 400, 14px / 1.2 |
+| Corner radius | 5px tags, 15px cards, pills (9999px) |
+| Spacing | 4px base unit, 1140px container, 24px card padding |
+| Elevation | 2 shadow tiers, most used `rgba(0, 0, 0, 0.15) 0px 0px 10.8237px 0px` |
+| Motion | 200ms default with `ease` |
+| Breakpoints | 810px, 1280px |
+| Page flow | Content section → Hero → Content section → Stats band |
+| Built with | Framer |
+
+## Tokens — Colors
+
+| Name | Value | Token | Role |
+|------|-------|-------|------|
+| Canvas | `#efefef` | `--color-bg-canvas` | Page background — the base layer every other surface floats on · 0.92% of usage |
+| Primary Text | `#000000` | `--color-text-primary` | Primary copy, headings, high-emphasis UI labels — 18.3:1 against canvas · 53.92% of usage |
+| Secondary Text | `#887c71` | `--color-text-secondary` | Supporting copy and descriptions — 3.5:1 against canvas · 4.15% of usage |
+| Surface | `#ffffff` | `--color-bg-surface` | Elevated container fill — cards, nav bars, panels sitting on the canvas · 4.61% of usage |
+| Blue Dark | `#0000ee` | `--color-blue-dark` | Supporting text or icon color · 32.26% of usage |
+| Gray Light | `#ffffff99` | `--color-gray-light` | Supporting surface / fill color · 2.3% of usage |
+| Gray Near-black | `#00000066` | `--color-gray-deep` | Supporting surface / fill color · 1.84% of usage |
+
+**Gradients in use:**
+- `linear-gradient(rgb(255, 255, 255) 0%, rgb(239, 239, 239) 100%)` (4 uses)
+- `linear-gradient(rgb(254, 254, 254) 0%, rgb(249, 248, 248) 100%)` (1 uses)
+- `linear-gradient(rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)` (1 uses)
+
+## Tokens — Typography
+
+### UniversalSans-500 Regular — display+body family
+- **Weights:** 400, 504
+- **Sizes:** 116px, 64px, 44px, 28px, 16px, 14px
+- **Role:** Workhorse family — used for both display headlines and body/UI text across weights 400/504.
+
+### sans-serif — supporting family
+- **Weights:** 400
+- **Sizes:** 12px
+- **Role:** Supporting family for accents and specialized text.
+
+### Type Scale
+
+| Role | Size | Line Height | Letter Spacing | Weight | Family |
+|------|------|-------------|----------------|--------|--------|
+| display | 116px | 0.9 | -5.8px | 400 | UniversalSans-500 Regular |
+| heading-xl | 64px | 1 | -2.5px | 400 | UniversalSans-500 Regular |
+| heading-lg | 44px | 1.1 | -2px | 400 | UniversalSans-500 Regular |
+| subheading | 16px | 1.2 | — | 400 | UniversalSans-500 Regular |
+| body | 14px | 1.2 | — | 400 | UniversalSans-500 Regular |
+| small | 12px | — | — | 400 | sans-serif |
+
+## Tokens — Spacing & Shapes
+
+**Density:** comfortable
+
+### Border Radius
+
+| Context | Value | Usage |
+|---------|-------|-------|
+| card | 15px | 25 elements |
+| image | 15px | 7 elements |
+| tag | 5px | 5 elements |
+| other | 5px | 4 elements |
+| button | pill (fully rounded, 500px) | 2 elements |
+
+### Shadows
+
+| Name | Value | Token |
+|------|-------|-------|
+| sm | `rgba(0, 0, 0, 0.15) 0px 0px 10.8237px 0px` | `--shadow-sm` |
+| md | `rgba(0, 0, 0, 0.15) 0px 0px 10px 0px` | `--shadow-md` |
+
+### Layout
+
+- **Page max-width:** 1140px
+- **Section gap:** not detected
+- **Card padding:** 24px
+- **Element gap:** 10px
+- **Spacing base unit:** 4px
+
+## Effects & Treatments
+
+- **Glassmorphism:** `backdrop-filter: blur(30px)` (1 surfaces) — frosted translucent panels
+- **Gradients:** linear ×8, radial ×1
+- **Blend modes:** lighten ×2 (duotone/tinting treatment)
+- **Filters:** 1 filtered elements
+
+## Tokens — Motion
+
+### Duration scale
+
+| Token | Value | Use |
+|-------|-------|-----|
+| `--duration-fast` | 200ms | hover/color transitions (1 observed) |
+| `--duration-moderate` | 400ms | panels, accordions, toasts (1 observed) |
+| `--duration-slow` | 890ms | hero reveals, page-level (1 observed) |
+
+### Easing
+
+| Token | Value | Character |
+|-------|-------|-----------|
+| `--ease-custom-1` | `ease` | used 6× |
+| `--ease-custom-2` | `linear` | used 3× |
+
+### Animation recipes (paste-ready)
+
+```css
+/* web-animations: div.framer-c8iz0y-container — trigger: entrance (on load / on scroll into view); 890ms linear; target: div.framer-c8iz0y-container */
+/* web-animations: div.framer-1reopzm — trigger: on load; 400ms linear; target: div.framer-1reopzm */
+/* animation: div.framer-hsodbb-container — trigger: scroll; 0ms ; target: div.framer-hsodbb-container */
+```
+
+**Reduced motion:** no `prefers-reduced-motion` handling detected; add one when rebuilding.
+
+## Design Token System
+
+**Naming fingerprint:** bespoke — these 13 custom properties match no framework convention (Tailwind, shadcn/ui, MUI, Chakra, Bootstrap, Ant, Mantine, Material 3 and Open Props were all tested), and read as hand-authored: `--one-if-corner-shape-supported`, `--overflow-clip-fallback`, `--framer-aspect-ratio-supported`, `--framer-will-change-filter-overr…`, `--framer-will-change-override`.
+
+**Scopes captured:** `:root, body` → light (13 vars).
+
+### Variable groups
+
+| Group | Kind | Count | Examples |
+|---|---|---|---|
+| `--framer-will` | other | 2 | `--framer-will-cha…: filter` `--framer-will…` |
+| `(ungrouped)` | mixed | 11 | `--one-if-corner-s…: 1` `--overflow-clip-f……` |
+
+**Tokenised coverage:** 68% of the page's most-used colours resolve to a variable — the system is half-tokenised: the core palette resolves to variables but accents are still hard-coded.
+
+### Paste-ready token block
+
+```css
+:root {
+  /* color */
+  --token-8f490cca-7ac2-4b46-8149-5bc7eada9ca1: #fff;
+  --token-f24fbd61-519a-465a-b915-6988c528f8e8: #efefef;
+  --token-0af017fd-2988-4fa9-9797-50804d37efb5: #f8f8f8;
+  --token-60cf6376-3935-48f9-a495-221c04fe9986: #00f;
+  --token-63959f4a-0983-4dd0-b80c-b43ec3c1b38e: #000;
+  --token-87fac70e-59d0-4930-b75b-623e02ca0d77: #887c71;
+  --token-97d1c4c6-6d34-412f-af68-34fd23dc3e3c: #fff9;
+  --token-ad925546-bae4-4b02-9183-ca1cb4e05bf4: #b4aaa0;
+  /* other */
+  --framer-aspect-ratio-supported: auto;
+  --framer-will-change-override: transform;
+  --framer-will-change-filter-override: filter;
+  --one-if-corner-shape-supported: 1;
+  --overflow-clip-fallback: hidden;
+}
+```
+
+**Caveats:** 1 component/width-scoped var blocks skipped
+
+## Scroll & Reveal Motion
+
+The page reveals content as it scrolls. Measured over a full end-to-end scroll pass:
+
+- **fade in** — 1 element (100% of 1 reveals)
+- **slide up** — 1 element (100% of 1 reveals)
+
+### Reveal inventory
+
+| Animation | Properties | Duration | Easing | Target |
+|---|---|---|---|---|
+| — | `opacity, transform` | — | — | `div.framer-hsodbb-conta…` ×1 |
+
+### How to wire it
+
+- Observe with a single `IntersectionObserver` at `threshold: 0.15` and `rootMargin: "0px 0px -10% 0px"`, add `is-visible`, then `unobserve` — every measured reveal fired once on entry, none replayed on scroll-back.
+- The page declares **no** `prefers-reduced-motion` handling. Add the guard above anyway — it costs nothing and the original is worse for the omission.
+
+## Micro-interactions
+
+### Declared transitions
+
+| Properties | Duration | Easing | Applies to |
+|------------|----------|--------|------------|
+| `opacity` | 200ms | `ease` | element (6 elements) |
+
+### Hover states (from live stylesheets)
+
+- `a.framer-text:hover` (1 elements) → background-color: var(--framer-link-hover-text-background-color,var(--framer-link-text-background-color,var(; color: var(--framer-link-hover-text-color,var(--framer-link-text-color,var(--framer-blockquote-te; text-decoration-color: var(--framer-link-hover-text-decoration-color,var(--framer-link-text-decoration-color,var(
+- `a.framer-text:hover` (1 elements) → background-color: var(--framer-link-hover-text-background-color-rgb,var(--framer-link-hover-text-background-; color: var(--framer-link-hover-text-color-rgb,var(--framer-link-hover-text-color,var(--framer-lin; text-decoration-color: var(--framer-link-hover-text-decoration-color-rgb,var(--framer-link-hover-text-decoration-
+
+### Interaction patterns
+
+- **Hover language:** predominantly *tint* (100% of 26 hover rules)
+- **Cursor language:** pointer, auto
+
+## Component State Matrix
+
+Past that the archetypes are indistinguishable in their measured states — what separates them is the rest styling, not the interaction.
+
+### Interaction language
+
+- **Focus policy:** no measurable focus styling was resolved on any archetype — add a visible ring when rebuilding; this is an accessibility defect to fix, not a style to copy.
+- **Tap targets:** median 85×24px over 42 interactive elements; 33 (79%) fall under the 44px guidance — smallest: `a.framer-qgzLY` 60×13px, `a.framer-qgzLY` 77×13px.
+- **Cursor language:** Icon button → `pointer`, Link → `auto`, Nav item → `pointer`. 149 non-interactive elements also carry `cursor: pointer` — the page signals clickability broadly.
+
+## Components
+
+### Filled #00000066 button
+**Role:** primary action
+
+#00000066 background, #000000 text, border-radius 500px, padding 0px 0px, sans-serif 400 12px. Transitions: all 0s.
+
+### Card — `.framer-5wldho` (4 instances)
+
+#ffffff background, border-radius 15px, padding 24px 24px, no shadow.
+
+### Text link (35 instances)
+
+#0000ee text, no underline by default, sans-serif 400 12px. Hover transition: all 0s.
+
+### Heading stack
+
+| Level | Sample | Font | Size | Line Height | Tracking |
+|-------|--------|------|------|-------------|----------|
+| H1 | Bespoke credit cards, deposit  | UniversalSans-500 Regular 400 | 64px | 64px | -2.5px |
+| H2 | An impactful partner to iconic | UniversalSans-500 Regular 400 | 44px | 48.4px | -2px |
+
+## Component API Sketch
+
+### Props, from the measured variants
+
+```ts
+// Every union member below was measured on this page. Nothing is invented.
+type ButtonVariant = 'icon';
+
+interface ButtonProps {
+  variant?: ButtonVariant;   // "icon" is the default — 2 instances
+  // one button size only: 0px 0px padding
+  iconOnly?: boolean;      // a square icon-only variant was measured
+  children: React.ReactNode;
+}
+
+interface CardProps {
+  children: React.ReactNode;
+}
+```
+
+### React + Tailwind, using the measured values
+
+```jsx
+// Primary button — measured: #00000066 fill, #000000 text, 500px radius, 0px 0px padding, sans-serif 400 12px
+export function Button({ children, ...props }) {
+  return (
+    <button
+      className="inline-flex items-center justify-center font-normal text-xs rounded-[500px] px-0 py-0 bg-[#00000066] text-[#000000] transition-colors duration-[200ms] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00000066]"
+      {...props}
+    >
+      {children}
+    </button>
+  );
+}
+
+// Card — measured: #ffffff surface, 15px radius, 24px 24px padding, flat, 4 instances
+export function Card({ children }) {
+  return <div className="bg-[#ffffff] rounded-[15px] px-6 py-6">{children}</div>;
+}
+```
+
+_Arbitrary values (`px-[18px]`, `bg-[#4f46e5]`) appear wherever the measured number has no Tailwind scale token — that is deliberate; rounding them to the nearest token changes the design._
+
+## Starter Components
+
+Working React + Tailwind v4 components built from the measured values — the same numbers as the tables above, already wired to the `@theme` tokens in Quick Start. Hover, focus and active classes come from the Component State Matrix. Start here instead of from a blank file.
+
+```tsx
+// Starter components generated by DesignMD from https://imprint.co/?ref=minimal.gallery on 2026-10-28.
+// Every value below was measured on the page. Needs the Tailwind v4 @theme block from design.md.
+import * as React from 'react';
+
+const cx = (...parts: unknown[]) => parts.filter(Boolean).join(' ');
+
+/* ---------------------------------------------------------------- Button */
+type ButtonVariant = 'primary';
+
+const buttonBase = 'inline-flex items-center justify-center gap-2 whitespace-nowrap text-small font-normal rounded-full p-0 transition-all ease-custom-1 disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none';
+
+const buttonVariants: Record<ButtonVariant, string> = {
+  primary: 'bg-gray-deep text-text-primary',
+};
+
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ButtonVariant;
+}
+
+export function Button({ variant = 'primary', className, ...props }: ButtonProps) {
+  return <button className={cx(buttonBase, buttonVariants[variant], className)} {...props} />;
+}
+
+/* ------------------------------------------------------------------ Card */
+const cardBase = 'bg-bg-surface rounded-lg p-6';
+
+export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+}
+
+export function Card({ className, ...props }: CardProps) {
+  return <div className={cx(cardBase, className)} {...props} />;
+}
+
+/* -------------------------------------------------------------- TextLink */
+export function TextLink({ className, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>) {
+  return <a className={cx('text-blue-dark font-normal no-underline hover:underline underline-offset-4 transition-colors', className)} {...props} />;
+}
+
+/* ------------------------------------------------------- Layout */
+export function Container({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
+  return <div className={cx('mx-auto w-full max-w-[1140px] px-6', className)} {...props} />;
+}
+
+export function Section({ className, ...props }: React.HTMLAttributes<HTMLElement>) {
+  return <section className={cx('py-25', className)} {...props} />;
+}
+
+/* --------------------------------------------------------------- Heading */
+const headingSizes = {
+  1: 'text-display font-normal',
+  2: 'text-heading-xl font-normal',
+  3: 'text-heading-lg font-normal',
+  4: 'text-subheading font-normal',
+} as const;
+
+export function Heading({ level = 1, className, ...props }: React.HTMLAttributes<HTMLHeadingElement> & { level?: 1 | 2 | 3 | 4 }) {
+  const Tag = (["h1","h2","h3","h4"] as const)[level - 1];
+  return <Tag className={cx('font-display text-balance', headingSizes[level], className)} {...props} />;
+}
+```
+
+## Do's and Don'ts
+
+### Do
+- Use `#efefef` as the canvas and build every surface from the token table above — never invent intermediate grays
+- Snap all spacing to the 4px base unit grid
+- Use fully-rounded (pill, 9999px) radii for buttons and tags
+- Default interactive transitions to 200ms with the extracted easing tokens
+
+### Don't
+- Do not introduce colors outside the 7-token palette extracted above
+- Do not add springy/bounce motion — the source uses the timing functions listed under Tokens — Motion
+- Do not stack multiple shadows — keep elevation minimal and let whitespace separate content
+
+## Surfaces
+
+| Level | Name | Value | Purpose |
+|-------|------|-------|---------|
+| 0 | Canvas | `#efefef` | Page background — the base layer |
+| 1 | Surface | `#ffffff` | Cards, nav bars, panels floating on the canvas |
+
+## Elevation
+
+- **Low:** `rgba(0, 0, 0, 0.15) 0px 0px 10.8237px 0px` (5 uses)
+- **Mid:** `rgba(0, 0, 0, 0.15) 0px 0px 10px 0px` (3 uses)
+
+## Imagery
+
+14 raster images and 0 inline SVGs were found. Dominant aspect ratios: 1:1, 2.19:1, 1.7:1, 2.74:1. Media is rounded at ~15px or more. Photography or rendered imagery carries the visual weight.
+
+## Assets & Media
+
+### Image inventory
+
+| Role | Rendered | Aspect | Fit | Loading | Alt |
+|---|---|---|---|---|---|
+| Logo | 1135×1453px @1x · jpg | 0.78:1 | cover | lazy · srcset | A close-up of Imprint's logo … |
+| Content | 1037×704px @1.1x · jpg | 1.47:1 | cover | · srcset | **missing** |
+| Content | 1155×528px · jpg | 2.19:1 | cover | · srcset | **missing** |
+| Content | 1155×528px · jpg | 2.19:1 | cover | · srcset | **missing** |
+| Content | 896×528px @1.3x · jpg | 1.7:1 | cover | · srcset | **missing** |
+| Content | 896×528px @1.3x · jpg | 1.7:1 | cover | · srcset | **missing** |
+| Content | 488×488px @2.1x · jpg | 1:1 | cover | lazy | A mobile phone mockup showing… |
+| Illustration | 572×271px · svg | 2.11:1 | contain | — | **missing** |
+| Content | 415×300px @2.8x · png | 1.38:1 | contain | · srcset | **missing** |
+| Illustration | 444×271px · svg | 1.64:1 | contain | — | **missing** |
+| Illustration | 572×209px · svg | 2.74:1 | contain | — | **missing** |
+| Illustration | 444×209px · svg | 2.12:1 | contain | — | **missing** |
+
+_+2 further images on the page._
+
+**Image pipeline:** 14 images; 14% ship a 2× source; 14% are lazy-loaded; 100% carry alt text; average aspect 1.64:1; formats jpg ×7, svg ×6, png ×1.
+
+| Icon property | Measured value |
+|---|---|
+| Icons sampled | 3 |
+| Corners / caps | unknown |
+| Delivery | sprite |
+
+### Web fonts
+
+| Family | Format | Weight | Display | Host |
+|---|---|---|---|---|
+| Inter | woff2 | 600 | swap | fonts.gstatic.com |
+| UniversalSans-500 Regular | woff | 504 | — | framerusercontent.com |
+| UniversalSans-500 Regular | woff | normal | swap | framerusercontent.com |
+| UniversalSans-670 Regular | woff | normal | swap | framerusercontent.com |
+| UniversalSans-670 Regular | woff | 670 | — | framerusercontent.com |
+| Inter | woff2 | 400 | swap | framerusercontent.com |
+| Inter | woff2 | 700 | swap | framerusercontent.com |
+| Inter | woff2 | 700 | swap | framerusercontent.com |
+
+_63 `@font-face` rules in total (8 distinct families shown)._
+
+The resolved fallback stacks — copy them verbatim; the fallbacks are what the page shows before the webfont lands:
+
+```css
+--font-body: sans-serif;
+--font-heading: "UniversalSans-500 Regular", "UniversalSans-500 Regular Placeholder", sans-serif;
+```
+
+**Font delivery:** mixed from `bjjobdlpgglckcmhgmmecijpfobmc…`, `framerusercontent.com`, `fonts.gstatic.com` (@font-face src fonts.gstatic.com; @font-face src framerusercontent.com). 63 faces registered, 3 actually loaded and 60 never used — do not ship the dead weights.
+
+**Brand marks:** apple-touch-icon present.
+
+### Rich media
+
+- **Video:** 2 elements and muted on loop, no visible controls, 2 with a poster frame; sample renders 1135×687px with `object-fit: cover`.
+- **Embeds:** 1 iframe (other ×1).
+
+_Asset notes: 63 @font-face rules declared — listing the first 24 unique faces._
+
+## Layout
+
+Content is centered in a ~1140px max-width container. Cards use ~24px padding. The hero heading is start-aligned.
+
+## Page Blueprint
+
+```text
+┌──────────────────────────────────────────────────────────┐
+│ HEADER                        756px · transparent on top │
+├──────────────────────────────────────────────────────────┤
+│ 1. HEADER                                756px · 110% vh │
+│   #efefef · 1 col · full-bleed                           │
+├──────────────────────────────────────────────────────────┤
+│ 2. CONTENT                                463px · 67% vh │
+│   #efefef · 6 cols · 1103px container                    │
+├──────────────────────────────────────────────────────────┤
+│ 3. CONTENT                              1100px · 160% vh │
+│   #efefef · 1 col · full-bleed                           │
+├──────────────────────────────────────────────────────────┤
+│ 4. CONTENT                              1326px · 193% vh │
+│   #efefef · 2 cols · 1024px container                    │
+├──────────────────────────────────────────────────────────┤
+│ 5. CONTENT                              1220px · 178% vh │
+│   #efefef · 1 col · 1103px container                     │
+├──────────────────────────────────────────────────────────┤
+│ 6. FOOTER                               1453px · 212% vh │
+│   #efefef · 1 col · 1055px container                     │
+├──────────────────────────────────────────────────────────┤
+│ FOOTER                                 1 column · 1453px │
+└──────────────────────────────────────────────────────────┘
+```
+
+| # | Band | Height | Container | Padding | Columns |
+|---|---|---|---|---|---|
+| 1 | Header | 756px (110% vh) | full-bleed | 0px | 1 |
+| 2 | Content | 463px (67% vh) | 1103px / 0px gutter | 50px | 6 |
+| 3 | Content | 1100px (160% vh) | full-bleed | 100px | 1 |
+| 4 | Content | 1326px (193% vh) | 1024px / 0px gutter | 100px | 2 |
+| 5 | Content | 1220px (178% vh) | 1103px / 0px gutter | 100px | 1 |
+| 6 | Footer | 1453px (212% vh) | 1055px / 24px gutter | 400px / 16px | 1 |
+
+_Identical on all 6 bands: background #efefef._
+
+### How to rebuild each band
+
+**1 · Header** — 756px tall, about 110% of the viewport. Background `#efefef`. The band runs full-bleed edge to edge, vertical padding 0px top / 0px bottom, a single column.
+
+**2 · Content** — 463px tall, about 67% of the viewport. Background `#efefef`; inner surfaces use `#000000` on 100% of its elements. Content sits in a 1103px container with 0px side padding, vertical padding 50px top / 50px bottom, 6 columns at a 24px gap, items no narrower than 915px. Text is `#000000` at 18.3:1 against the band, set in UniversalSans-500 Regul… 400 16px/16px on 33% of its text and UniversalSans-500 Regul… 400 28px/32px on 33% of its text.
+
+**3 · Content** — 1100px tall, about 160% of the viewport. Background `#efefef`; inner surfaces use `#000000` on 100% of its elements. The band runs full-bleed edge to edge, vertical padding 100px top / 100px bottom, a single column. Text is `#000000` at 18.3:1 against the band, set in UniversalSans-500 Regul… 400 16px/19px on 56% of its text and UniversalSans-500 Regul… 400 16px/16px on 33% of its text.
+
+**4 · Content** — 1326px tall, about 193% of the viewport. Background `#efefef`; inner surfaces use `#ffffff` on 80% of its elements and `#000000` on 20% of its elements. Content sits in a 1024px container with 0px side padding, vertical padding 100px top / 100px bottom, 2 columns at a 75px gap, items no narrower than 461px. Text is `#000000` at 18.3:1 against the band, set in UniversalSans-500 Regul… 400 14px/14px on 62% of its text and UniversalSans-500 Regul… 400 16px/19px on 15% of its text.
+
+**5 · Content** — 1220px tall, about 178% of the viewport. Background `#efefef`; inner surfaces use `#000000` on 56% of its elements and `#ffffff` on 44% of its elements. Content sits in a 1103px container with 0px side padding, vertical padding 100px top / 100px bottom, a single column. Text is `#000000` at 18.3:1 against the band, set in UniversalSans-500 Regul… 400 14px/17px on 42% of its text and UniversalSans-500 Regul… 504 116px on 33% of its text.
+
+**6 · Footer** — 1453px tall, about 212% of the viewport. Background `#efefef`; inner surfaces use `#ffffff` on 100% of its elements. Content sits in a 1055px container with 24px side padding, vertical padding 400px top / 16px bottom, a single column. Text is `#000000` at 18.3:1 against the band, set in UniversalSans-500 Regul… 400 14px/17px on 100% of its text.
+
+### Page chrome
+
+- **Header** — 756px tall, `position: relative`, transparent until scrolled, 0px side padding, z-index 0.
+- **Footer** — 1 column (row-cluster), column widths 1055px, 1453px tall, padding 400px / 16px, 1055px inner container.
+
+## Grid & Composition
+
+**Container widths:** 1100px on 2 bands · 1020px on 1 band · 1060px on 1 band. The widest measured column is 1100px — build the shell at that width and let narrower bands opt down.
+
+### Grid recipes
+
+| Where | Display | Columns | Gap | Align / justify |
+|---|---|---|---|---|
+| `header.framer-uho9lq` | flex / column | 1 | 0px | center / flex-start |
+| `div.framer-193ryem` | grid | 6 · `repeat(6, 1fr)` | 24px | normal / center |
+| `section.framer-1eromds` | flex / column | 1 | 75px | center / flex-start |
+| `div.framer-1ycxam4` | flex / row | 2 | 75px | flex-start / flex-start |
+| `div.framer-1lew785` | flex / column | 1 | 100px | center / flex-start |
+| `div.framer-udwCX` | flex / column | 1 | 24px | flex-start / center |
+| `div.framer-t6ichj` | grid | 2 · `repeat(2, 1fr)` | 16px | normal / center |
+| `div.framer-n9xipj` | grid | 6 · `repeat(6, 1fr)` | 24px | normal / center |
+| `div.framer-wfehl1` | flex / column | 1 | 150px | center / flex-start |
+| `a.framer-1tte46d` | flex / column | 1 | 10px | center / center |
+
+_+6 further measured containers._
+
+- **Deliberate offsets:** 1 of 158 sampled elements carry a real translate (`div.framer-6c2wxc` -259px x, -192px y) — the stagger is designed, not accidental.
+
+### Z-index layer stack
+
+| z | Role | Position | Element |
+|---|---|---|---|
+| 10 | Decor | absolute | `div.framer-c8iz0y-conta…` · 144×41px |
+| 9 | Decor | fixed | `div.framer-1dx9q1h-cont…` · 1×800px |
+| 1 | Decor | absolute | `figcaption.framer-6s1a2j` · 488×488px |
+| 1 | Decor | absolute | `div.framer-1t7d7qd` · 1135×189px · #efefef |
+| 1 | Decor | absolute | `div.framer-6c2wxc` · 572×271px |
+| 1 | Decor | absolute | `div.framer-x7r28p` · 415×300px |
+| 1 | Decor | absolute | `div.framer-6c2wxc` · 444×271px |
+| 1 | Decor | absolute | `div.framer-1yxh3qr` · 572×209px |
+| 1 | Decor | absolute | `div.framer-1yxh3qr` · 444×209px |
+| 1 | Decor | absolute | `div.framer-1iay09x-cont…` · 235×50px |
+
+**Z-index scale in use:** `0` · `1` · `9` · `10` — reuse exactly these 4 steps, do not invent intermediate values.
+
+**Vertical rhythm:** bands sit a median 0px apart, most commonly 0px, across 6 bands and section padding clusters at 100px (top: 100px ×3, 52px ×1, 400px ×1).
+
+## Landing Page Anatomy
+
+The page tells a conversion story in this order — rebuild sections in this sequence:
+
+| Order | Section | Heading / evidence | Key elements |
+|-------|---------|--------------------|--------------|
+| 1 | Content section | — | — |
+| 2 | Hero | Bespoke credit cards, deposit accounts, and installment loans. | — |
+| 3 | Content section | Imprint Core means complete control | 1 images |
+| 4 | Stats band | Our track record | — |
+
+**Section flow:** content → hero → content → stats
+
+## Hero & Conversion
+
+- **Headline:** "Bespoke credit cards, deposit accounts, and installment loans."
+- **Subheadline:** "Our co-branded financial products attract more users, drive increased spend and engagement, and help you better understand your customers."
+- **Social proof:** a stats band
+- **Nav anatomy:** logo
+
+## Signature Devices
+
+These patterns define the site's identity — repeat them across every new page:
+
+1. **The Pill Button Language** — every interactive element is fully rounded (9999px radius) — buttons, tags, inputs and badges share one geometry
+2. **Card-on-Canvas Contrast** — #ffffff surfaces float on a #efefef canvas — separation comes from background contrast, not shadows
+
+## Content & Copy
+
+### Copy per band
+
+| Band | Eyebrow | Heading | CTA |
+|---|---|---|---|
+| Hero | — | Bespoke credit cards, deposit accounts, and… | "Learn more" |
+| Content | — | Imprint Core means complete control | "Learn more" |
+| Stats | — | Our track record | — |
+
+_2 further bands carried no headline copy._
+
+### Footer columns
+
+- **Company** — Home, Products, Technology, Partners, About, News & Press, Careers, Blog
+- **Resources** — Status, Support, Learn
+- **Resources** — Cardholder login, Cardholder support, Card programs, Privacy Policy, Terms of Use
+- **Also in the footer** — social: linkedin; legal line "© Imprint Payments 2026"
+
+### Voice & tone
+
+- **Heading case:** sentence case — 100 sentence, 0 title, 0 upper across 100 headings. Match the dominant one exactly; mixing reads as a different brand.
+- **Heading length:** 5.8 words on average over 8 headings — medium; a full clause per heading.
+- **Person:** first person plural — the company speaks about itself (you ×50, we ×50).
+- **Questions:** 0% of headlines are questions — every heading is a statement.
+- **Reading level:** dense — 16.9 words per sentence, 5.8 letters per word.
+- **Jargon:** high (3% of words) — house terms: "seamless", "bespoke".
+- **CTA verbs:** "learn" ×2 — every button starts with one of these.
+- **Signature phrases:** "imprint core" ×3, "bespoke credit" ×2, "credit cards" ×2, "cards deposit" ×2, "deposit accounts" ×2, "installment loans" ×2 — repeat them; they are the vocabulary of the brand.
+
+**Document metadata:** title "Imprint - Modern co-branded credit cards"; description "Meet the powerful, purpose-built co-branded products that seamlessly adapt to your brand."; heading hierarchy H1 ×1 · H2 ×4 · H3 ×0; lang `en-US`.
+
+## Accessibility Profile
+
+- **Contrast discipline:** 93% of measured text usage clears WCAG AA (4.5:1)
+- **Focus design:** no deliberate focus styling detected
+- **Reduced motion:** no `prefers-reduced-motion` handling found — add it when rebuilding
+- **Semantics:** 4 landmarks · 24 ARIA-carrying elements · 100% of images have alt text
+
+## Responsive
+
+Breakpoints declared in stylesheets: `809px`, `809.98px`, `810px`, `1279px`, `1279.98px`.
+
+Current viewport analyzed at 1150×687 (desktop-scale view).
+ The site also uses container queries for component-level responsiveness.
+
+## Responsive Behaviour
+
+**Strategy:** desktop-first (`max-width` queries strip down) — 0 min-width rules, 26 max-width rules, 20 range rules.
+
+**Ladder:** the 2 breakpoints match no standard scale — they are custom to this site.
+
+### Breakpoint matrix
+
+| Tier | Query | Layout | Spacing | Type | Hidden / shown |
+|---|---|---|---|---|---|
+| md only | `810–1280px` | 2 col | padding-bottom 50px | — | — |
+| <md | `≤810px` | 6→1 col | space +38% | — | — |
+
+Across the 2 stops the ladder rewrites 134 declarations in 46 rules, the heaviest being `<md` at 81. Nothing else moves — anything not in the matrix above holds at every width.
+
+### Mobile adaptation
+
+- **Grid collapse:** 1 grid drops to a single column and 1 flex row turn into columns.
+- **Spacing:** shifts +38% at mobile widths — padding and gaps grow by roughly that much, not to an arbitrary smaller value.
+
+### Modern CSS in play
+
+- **Container queries** are in use — components size to their container, not the viewport. Port the `@container` rules or the layout will not match at intermediate widths.
+- **`aspect-ratio`** holds media boxes instead of padding hacks.
+- **Intrinsic grids** — `auto-fit` / `minmax()` do the column maths instead of breakpoints.
+
+**Fluid type:** sizes interpolate with `clamp()` / viewport units rather than stepping at breakpoints.
+
+_Caveats: 2 declared breakpoint values had no capturable declarations (cross-origin or nested stylesheets)._
+
+## Agent Prompt Guide
+
+**Quick Color Reference**
+- canvas: #efefef
+- primary text: #000000
+- secondary text: #887c71
+- surface: #ffffff
+- blue dark: #0000ee
+- gray light: #ffffff99
+- gray near-black: #00000066
+
+**Example Component Prompts**
+
+1. Rebuild the full landing page in exactly this order: content → hero → content → stats. Use the Hero & Conversion spec for the first screen, one component recipe per section, and the section rhythm from the Layout metrics.
+2. Create the primary button: #00000066 background, #000000 text, border-radius 500px, padding 0px 0px, font sans-serif 400 12px. On hover, transition all 0s.
+3. Create a card: #ffffff background, border-radius 15px, padding 24px 24px, no shadow.
+4. Create the display heading: UniversalSans-500 Regular weight 400, 116px, line-height 0.9, letter-spacing -5.8px, #000000 on #efefef.
+
+## Quick Start
+
+### CSS Custom Properties
+
+```css
+:root {
+  /* Colors */
+  --color-bg-canvas: #efefef;
+  --color-text-primary: #000000;
+  --color-text-secondary: #887c71;
+  --color-bg-surface: #ffffff;
+  --color-blue-dark: #0000ee;
+  --color-gray-light: #ffffff99;
+  --color-gray-deep: #00000066;
+
+  /* Typography — Font Families (by role) */
+  --font-display: "UniversalSans-500 Regular", "UniversalSans-500 Regular Placeholder", sans-serif;
+  --font-body: 'UniversalSans-500 Regular', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Typography — Scale */
+  --text-display: 116px;
+  --leading-display: 0.9;
+  --tracking-display: -5.8px;
+  --text-heading-xl: 64px;
+  --leading-heading-xl: 1;
+  --tracking-heading-xl: -2.5px;
+  --text-heading-lg: 44px;
+  --leading-heading-lg: 1.1;
+  --tracking-heading-lg: -2px;
+  --text-subheading: 16px;
+  --leading-subheading: 1.2;
+  --text-body: 14px;
+  --leading-body: 1.2;
+  --text-small: 12px;
+
+  /* Layout */
+  --page-max-width: 1140px;
+  --card-padding: 24px;
+  --element-gap: 10px;
+  --spacing-unit: 4px;
+
+  /* Border Radius */
+  --radius-sm: 5px; /* tag */
+  --radius-lg: 15px; /* card, image */
+  --radius-full: 9999px; /* pills */
+
+  /* Shadows */
+  --shadow-sm: rgba(0, 0, 0, 0.15) 0px 0px 10.8237px 0px;
+  --shadow-md: rgba(0, 0, 0, 0.15) 0px 0px 10px 0px;
+
+  /* Motion */
+  --duration-fast: 200ms;
+  --duration-moderate: 400ms;
+  --duration-slow: 890ms;
+  --ease-custom-1: ease;
+  --ease-custom-2: linear;
+
+  /* Iconography */
+}
+```
+
+### Tailwind v4
+
+```css
+@import "tailwindcss";
+
+@theme {
+  /* Colors → bg-*, text-*, border-* */
+  --color-bg-canvas: #efefef;
+  --color-text-primary: #000000;
+  --color-text-secondary: #887c71;
+  --color-bg-surface: #ffffff;
+  --color-blue-dark: #0000ee;
+  --color-gray-light: #ffffff99;
+  --color-gray-deep: #00000066;
+
+  /* Fonts → font-display, font-body, font-mono */
+  --font-display: "UniversalSans-500 Regular", "UniversalSans-500 Regular Placeholder", sans-serif;
+  --font-body: 'UniversalSans-500 Regular', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Type scale → text-display, text-body, … */
+  --text-display: 116px;
+  --text-display--line-height: 0.9;
+  --text-display--letter-spacing: -5.8px;
+  --text-heading-xl: 64px;
+  --text-heading-xl--line-height: 1;
+  --text-heading-xl--letter-spacing: -2.5px;
+  --text-heading-lg: 44px;
+  --text-heading-lg--line-height: 1.1;
+  --text-heading-lg--letter-spacing: -2px;
+  --text-subheading: 16px;
+  --text-subheading--line-height: 1.2;
+  --text-body: 14px;
+  --text-body--line-height: 1.2;
+  --text-small: 12px;
+
+  /* Radius → rounded-* */
+  --radius-sm: 5px;
+  --radius-lg: 15px;
+  --radius-full: 9999px;
+
+  /* Shadows → shadow-* */
+  --shadow-sm: rgba(0, 0, 0, 0.15) 0px 0px 10.8237px 0px;
+  --shadow-md: rgba(0, 0, 0, 0.15) 0px 0px 10px 0px;
+
+  /* Easing → ease-* */
+  --ease-custom-1: ease;
+  --ease-custom-2: linear;
+
+  /* Breakpoints → sm:, md:, lg:, … (measured from the source) */
+  --breakpoint-sm: 810px;
+  --breakpoint-md: 1280px;
+}
+
+/* Durations have no Tailwind namespace — use as duration-(--duration-base) */
+:root {
+  --duration-fast: 200ms;
+  --duration-moderate: 400ms;
+  --duration-slow: 890ms;
+}
+```
+
+## Rebuild Checklist
+
+Build in this order. Every item carries the measured numbers it needs — nothing here requires going back to the page.
+
+- [ ] Paste the `:root` block from **Design Token System** — 13 custom properties across 2 naming groups. Nothing below should hard-code a value that exists there.
+- [ ] Set the type scale: 116 / 64 / 44 / 16 / 14 / 12px over 6 steps, UniversalSans-500 Regul… + sans-serif.
+- [ ] Set the spacing scale: 8 / 10 / 12 / 16 / 24 / 50 / 75 / 100px on a 4px base unit.
+- [ ] Set the radius scale: 5px (other), 15px (card), 500px (button).
+- [ ] Define 2 elevation steps, lightest first: `rgba(0, 0, 0, 0.15) 0px 0px 10.8237px 0px`, `rgba(0, 0, 0, 0.15) 0px 0px 10px 0px`.
+- [ ] Build the shell: a 1100px max-width centred container with 0px side gutters.
+- [ ] Paint the canvas `#efefef` and set the body text colour from the palette — this is a light page.
+- [ ] Build the header: 756px tall, z-index 0.
+- [ ] Band 1 — **Header**: 756px tall, `#efefef` background, 0px top padding.
+- [ ] Band 2 — **Content**: 463px tall, `#efefef` background, 1103px container, 50px top padding, 6 columns. Headline: "Bespoke credit cards, deposit accounts, and installment loa…".
+- [ ] Band 3 — **Content**: 1100px tall, `#efefef` background, 100px top padding. Headline: "Imprint Core means complete control".
+- [ ] Band 4 — **Content**: 1326px tall, `#efefef` background, 1024px container, 100px top padding, 2 columns. Headline: "Our track record".
+- [ ] Band 5 — **Content**: 1220px tall, `#efefef` background, 1103px container, 100px top padding.
+- [ ] Build the primary button: `#00000066` on `#000000` text, 500px radius, 0px 0px padding, sans-serif 400 12px — 2 instances on the page.
+- [ ] Build the card: `#ffffff` surface, 15px radius, 24px 24px padding, no border, flat — 4 instances.
+- [ ] Build the footer: 1 link columns, 1453px tall, 1 social icons.
+- [ ] Set the transition recipe: fast 200ms, moderate 400ms, slow 890ms, easing `ease`.
+- [ ] Wire the scroll reveal: `` on opacity, transform over ?ms, fired once by IntersectionObserver.
+- [ ] Add the breakpoint ladder: 810–1280px / ≤810px, desktop-first.
+- [ ] At mobile widths: drop 1 grid to one column; shift spacing +38%.
+- [ ] Accessibility polish before shipping: 93% of text already clears 4.5:1 — fix the remainder rather than copying it; 33 tap targets sit under 44px — pad them out; no `prefers-reduced-motion` handling exists — add it; there is no skip link — add one.
+
+## Extraction Coverage
+
+What was actually measured, and where the measurement stops. Read this before trusting a number above.
+
+- **Scan:** 460 elements styled · viewport 1150×687px · elapsed 2841ms.
+- **Deep pass:** mode `full`, 13 scroll passes over 13 planned steps of 550px.
+- **Page:** 6319px tall (9.2 viewports).
+- **Lazy loading:** DOM went 664 → 664 nodes.
+- **Virtualised list detected**. Anything measured inside it is a sample, not the whole list.
+- **Frames:** 1 iframe, 1 cross-origin and therefore unreadable.
+- **Bands sampled:** 10 viewport-height slices covering the full page.
+- **Stylesheets:** 7 read.
+- **States & overlays:** 0 hidden surfaces revealed and measured; 5 component archetypes resolved from 31 indexed pseudo-state rules; 5 live focus probes.
+- **Inventory:** 6 sections · 16 grid containers · 18 stacking layers · 14 images, 24 font faces · 5 copy bands · 13 custom properties · 2 breakpoints analysed.
+
+### Limits reached during the scan
+
+- 1 cross-origin iframe skipped
+- 1 component/width-scoped var blocks skipped
+- 2 declared breakpoint values had no capturable declarations (cross-origin or nested stylesheets).
+
+## Known Gaps
+
+- 1 cross-origin iframe skipped
+- no visible focus ring resolved on any sampled component
+- assets: 63 @font-face rules declared — listing the first 24 unique faces
