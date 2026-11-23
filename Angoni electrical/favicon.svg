@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Angoni Electrical</title>
+  <desc id="desc">Red and black lightning mark for Angoni Electrical Contractors</desc>
+  <rect width="64" height="64" rx="14" fill="#2a1f1d"/>
+  <path d="M37.5 7 17 36h13.5L26.5 57 47 28H33.5L37.5 7Z" fill="#de322d"/>
+  <path d="M38 10 21 34h12l-3.5 15L43 31H31l7-21Z" fill="#fff" opacity=".96"/>
+</svg>

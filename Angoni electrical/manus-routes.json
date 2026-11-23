@@ -1,0 +1,10 @@
+{
+  "routes": [
+    { "path": "/", "title": "Angoni Electrical Contractors" },
+    { "path": "/services.html", "title": "Electrical Services" },
+    { "path": "/projects.html", "title": "Electrical Projects" },
+    { "path": "/company.html", "title": "About Angoni Electrical" },
+    { "path": "/contact.html", "title": "Contact Angoni Electrical" },
+    { "path": "/crb_search.html", "title": "CRB Contractor Registration" }
+  ]
+}
