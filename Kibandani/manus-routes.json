@@ -1,0 +1,24 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "title": "Kibandani Civil & Building Contractors — CRB-Registered Nationwide"
+    },
+    {
+      "path": "/services.html",
+      "title": "Services — Building & Civil Works | Kibandani Contractors"
+    },
+    {
+      "path": "/projects.html",
+      "title": "Projects — Building & Civil Works | Kibandani Contractors"
+    },
+    {
+      "path": "/about.html",
+      "title": "About — CRB Registration & Company | Kibandani Contractors"
+    },
+    {
+      "path": "/contact.html",
+      "title": "Contact & Quotes — Dodoma Office | Kibandani Contractors"
+    }
+  ]
+}
