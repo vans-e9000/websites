@@ -1,0 +1,25 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Keep client-side React Router URLs working on direct visits and refreshes.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+
+# Vite fingerprints production assets, so they can be cached safely.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Avoid indexing the generated route manifest as a page.
+[[headers]]
+  for = "/manus-routes.json"
+  [headers.values]
+    X-Robots-Tag = "noindex"
