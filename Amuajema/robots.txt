@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# AI-readable site summary
+# /llms.txt
+# /llms-full.txt

@@ -1,0 +1,34 @@
+# 4GHR Website Build Status
+
+- [x] Define the light editorial design system with the requested red muted accent.
+- [x] Build the shared header, navigation, footer, buttons, cards, forms, and reveal motion.
+- [x] Source and verify 19 unique Pexels photographs with African construction context.
+- [x] Build the home page with hero, services, process, sectors, FAQ, and CTA.
+- [x] Build the services page with three detailed services and combined-scope guidance.
+- [x] Build the filterable projects capability page.
+- [x] Build the about page with verified CRB records and company profile.
+- [x] Merge the project brief into the Contact page and remove the separate quote page.
+- [x] Remove quote navigation, quote CTAs, quote routes, and quote metadata across the site.
+- [x] Recolor service, principle, contact, and process icons with the saturated `#e01b1a` accent.
+- [x] Hide the navigation on downward scroll and restore it on upward scroll.
+- [x] Correct the 4G brand pill alignment with a positioned red dot.
+- [x] Remove Arusha, Dodoma, and Iringa claims; frame the operating area as Tanzania with a Dar es Salaam base.
+- [x] Align sector card labels with their images (Commercial, Electrical, Civil).
+- [x] Standardize split media images to the 521 x 514 frame across all pages.
+- [x] Hide the media caption overlays sitewide.
+- [x] Remove the page breadcrumbs from every page hero.
+- [x] Replace the home approach image with the requested Unsplash power-line photograph.
+- [x] Remove every em dash and en dash from the delivered files, including the reference document.
+- [x] Add the full favicon set, browser configuration, and web manifest.
+- [x] Add a noindex 404 page and Netlify deployment configuration.
+- [x] Add local SEO metadata, contact point schema, and social preview metadata.
+- [x] Add responsive image sources, hero preloading, and lazy loading.
+- [x] Add Netlify cache and security headers for deployment.
+- [x] Validate the layout at mobile, tablet, and desktop widths.
+- [x] Add favicon set, web manifest, and five branded Open Graph images.
+- [x] Add page-level SEO metadata, canonical links, JSON-LD, sitemap, and robots.
+- [x] Verify responsive layout at 360, 390, 768, 1024, and 1440px widths.
+- [x] Verify no horizontal overflow, no broken internal links, and no quote references.
+- [x] Verify form validation, query-string prefill, and brief summary generation in a browser.
+- [x] Run axe accessibility checks on all five pages with zero violations.
+- [x] Confirm no banned vocabulary, placeholder copy, or em dashes in the delivered site.

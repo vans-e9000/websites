@@ -1,0 +1,57 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+.turbo/
+.expo/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+
+# OS & logs
+.DS_Store
+Thumbs.db
+*.log
+
+# Tooling / hosting
+.netlify/
+.vercel/
+.wrangler/
+.freebuff/
+.manus/
+.inspecta/
+.work/
+.preview/
+.cloud-attachments/
+.superpowers/
+
+# Local data
+*.sqlite
+*.db
+
+# Required excludes
+vendor/
+.npmrc
+credentials.json
+service-account*.json
+*.sqlite-shm
+*.sqlite-wal
+*.tmp
+.npm-cache/
+.agents/
+.claude/
+.extract-design-system/
+.screenshots/

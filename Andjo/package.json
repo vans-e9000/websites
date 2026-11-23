@@ -1,0 +1,13 @@
+{
+  "name": "andjo-engineering",
+  "version": "1.0.0",
+  "description": "Andjo Engineering Company Limited - static site",
+  "private": true,
+  "scripts": {
+    "build": "node build.mjs",
+    "preview": "node build.mjs && npx serve dist -l 3000"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,200 @@
+[
+  {
+    "slot": "home-hero",
+    "photo_id": 18806089,
+    "url": "https://images.pexels.com/photos/18806089/pexels-photo-18806089.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "landscape",
+    "subject": "Aerial drone view of a newly completed glass-and-concrete office tower rising beside a multi-lane highway; low-rise rooftops, palms and green trees fill the foreground under bright tropical daylight.",
+    "alt": "Aerial view of a modern glass office tower beside a busy highway in a tropical coastal city, with low-rise rooftops and greenery in the foreground",
+    "why_relevant": "Full-width landscape hero showing a newly built commercial tower next to major road infrastructure - represents commercial construction and infrastructure delivery in one frame. Provenance: drone photography of a Tanzanian coastal city (3104x1776)."
+  },
+  {
+    "slot": "home-approach",
+    "photo_id": "unsplash-1597502310092-31cdaa35b46d",
+    "url": "https://images.unsplash.com/photo-1597502310092-31cdaa35b46d?auto=format&fit=crop&w=1800&q=80",
+    "orientation": "landscape",
+    "subject": "Utility worker in a bucket lift repairing overhead power lines against a clear blue sky.",
+    "alt": "Utility worker in a bucket lift repairing overhead power lines",
+    "why_relevant": "Requested replacement for the home approach section."
+  },
+  {
+    "slot": "home-sector-commercial",
+    "photo_id": 38277835,
+    "url": "https://images.pexels.com/photos/38277835/pexels-photo-38277835.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "landscape",
+    "subject": "Aerial view of high-rise towers under construction along a waterfront, with tower cranes, exposed concrete cores and dense city blocks below.",
+    "alt": "Aerial view of high-rise towers under construction along a waterfront, with tower cranes and exposed concrete building cores",
+    "why_relevant": "Commercial high-rise construction with cranes and concrete - ideal landscape card image for the commercial sector. Provenance: West African waterfront city aerial."
+  },
+  {
+    "slot": "home-sector-electrical",
+    "photo_id": 34526423,
+    "url": "https://images.pexels.com/photos/34526423/pexels-photo-34526423.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "landscape",
+    "subject": "Female technician in a hard hat and safety vest working on an open industrial electrical control panel, with cable trays and switchgear around her.",
+    "alt": "Female technician in a hard hat and safety vest working on an industrial electrical control panel with cable trays and switchgear",
+    "why_relevant": "Shows electrical control and switchgear work, a core electrical contracting capability. Provenance: West African industrial electrical setting."
+  },
+  {
+    "slot": "home-sector-civil",
+    "photo_id": 40736607,
+    "url": "https://images.pexels.com/photos/40736607/pexels-photo-40736607.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "landscape",
+    "subject": "Road construction gang grading and compacting a new carriageway, with an excavator, tipper truck and workers in hi-vis vests on red-earth ground.",
+    "alt": "Road construction gang grading and compacting a new carriageway with an excavator, tipper truck and workers in hi-vis vests",
+    "why_relevant": "Civil and roadworks imagery with plant, red earth and a local crew - strong sector card. Provenance: West African road scheme."
+  },
+  {
+    "slot": "services-electrical",
+    "photo_id": 20500461,
+    "url": "https://images.pexels.com/photos/20500461/pexels-photo-20500461.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "landscape",
+    "subject": "Electrician on a stepladder feeding cables into ceiling conduit while wiring an interior installation.",
+    "alt": "Electrician on a stepladder feeding cables into ceiling conduit during an interior electrical installation",
+    "why_relevant": "Conduit, cable and wiring installation - everyday electrical services work; landscape orientation."
+  },
+  {
+    "slot": "services-specialist",
+    "photo_id": 10871585,
+    "url": "https://images.pexels.com/photos/10871585/pexels-photo-10871585.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "portrait",
+    "subject": "Two electricians working on control panels inside an industrial electrical room.",
+    "alt": "Electricians working on control panels in an industrial electrical room",
+    "why_relevant": "Specialist electrical panel work; portrait orientation fits the service split."
+  },
+  {
+    "slot": "services-civil",
+    "photo_id": 4832564,
+    "url": "https://images.pexels.com/photos/4832564/pexels-photo-4832564.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "landscape",
+    "subject": "Large construction site with heavy plant and an industrial building frame under construction, bare earth and stacked materials in the foreground.",
+    "alt": "Large construction site with heavy machinery and an industrial building frame under construction, with bare earth and stacked materials",
+    "why_relevant": "Plant, earthworks and structural frame - civil works capability; landscape. Provenance: stock site photo without location metadata."
+  },
+  {
+    "slot": "services-coordination",
+    "photo_id": 37198885,
+    "url": "https://images.pexels.com/photos/37198885/pexels-photo-37198885.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "landscape",
+    "subject": "Team of five engineers in hard hats and hi-vis vests reviewing construction drawings around a table indoors, plans spread out between them.",
+    "alt": "Team of five engineers in hard hats and hi-vis vests reviewing construction drawings around a table indoors",
+    "why_relevant": "Design coordination and site planning - fits the coordination service and shows an African team. Provenance: African engineering team photo series; landscape."
+  },
+  {
+    "slot": "projects-commercial",
+    "photo_id": 38511754,
+    "url": "https://images.pexels.com/photos/38511754/pexels-photo-38511754.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "landscape",
+    "subject": "Aerial view of a high-rise building under construction, with exposed concrete floor plates, a tower crane and neighbouring city blocks.",
+    "alt": "Aerial view of a high-rise building under construction with exposed concrete floor plates, a tower crane and neighbouring city blocks",
+    "why_relevant": "Commercial project case-study imagery. Provenance: West African city high-rise construction aerial; landscape."
+  },
+  {
+    "slot": "projects-institutional",
+    "photo_id": 12091126,
+    "url": "https://images.pexels.com/photos/12091126/pexels-photo-12091126.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "landscape",
+    "subject": "Aerial view of a modern educational campus with red-roofed buildings, paved roads, and landscaped green grounds.",
+    "alt": "Aerial view of a modern educational campus with red-roofed buildings and landscaped grounds",
+    "why_relevant": "Institutional campus imagery replacing a roadside structure; location-neutral alt text."
+  },
+  {
+    "slot": "projects-industrial",
+    "photo_id": 15360457,
+    "url": "https://images.pexels.com/photos/15360457/pexels-photo-15360457.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "landscape",
+    "subject": "Interior of a large logistics warehouse with stacked concrete blocks and industrial equipment beneath a high steel roof.",
+    "alt": "Interior of a large logistics warehouse with stacked concrete blocks and industrial equipment under a high steel roof",
+    "why_relevant": "Industrial / warehouse project reference for the projects section. Provenance: North African warehouse interior; landscape."
+  },
+  {
+    "slot": "projects-power",
+    "photo_id": 5328573,
+    "url": "https://images.pexels.com/photos/5328573/pexels-photo-5328573.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "landscape",
+    "subject": "Line crew in protective gear servicing an electricity pole from a bucket truck on a rural road, overhead conductors strung against a pale sky.",
+    "alt": "Line crew in protective gear servicing an electricity pole from a bucket truck on a rural road with overhead conductors",
+    "why_relevant": "Overhead line and distribution maintenance - power project capability. Provenance: East African rural power-line repair; landscape."
+  },
+  {
+    "slot": "projects-civil",
+    "photo_id": 27771755,
+    "url": "https://images.pexels.com/photos/27771755/pexels-photo-27771755.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "landscape",
+    "subject": "Construction worker in a reflective vest holding a hard hat on a rural road, with trees and warm late-afternoon light behind him.",
+    "alt": "Construction worker in a reflective vest holding a hard hat on a rural road with trees and warm evening light behind",
+    "why_relevant": "Rural road delivery context for civil projects. Provenance: West African rural road; landscape."
+  },
+  {
+    "slot": "projects-fitout",
+    "photo_id": 19893586,
+    "url": "https://images.pexels.com/photos/19893586/pexels-photo-19893586.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "landscape",
+    "subject": "Modern office reception interior with a curved timber desk, burgundy lounge chairs, suspended lighting and indoor plants.",
+    "alt": "Modern office reception interior with a curved timber desk, lounge chairs, suspended lighting and indoor plants",
+    "why_relevant": "Interior fit-out reference for commercial refurbishment work; no legible foreign signage. Provenance: North African office interior; landscape."
+  },
+  {
+    "slot": "about-team",
+    "photo_id": 38706752,
+    "url": "https://images.pexels.com/photos/38706752/pexels-photo-38706752.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "landscape",
+    "subject": "Group of smiling construction workers in hi-vis vests and hard hats standing together on an active building site.",
+    "alt": "Group of smiling construction workers in hi-vis vests and hard hats standing together on an active building site",
+    "why_relevant": "Team photo for the about page, showing a genuine local crew. Provenance: West African construction crew; landscape 6000x4000."
+  },
+  {
+    "slot": "about-site",
+    "photo_id": 30661413,
+    "url": "https://images.pexels.com/photos/30661413/pexels-photo-30661413.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "landscape",
+    "subject": "Construction workers in safety harnesses and hard hats working on scaffolding against a bright clear sky.",
+    "alt": "Construction workers in safety harnesses and hard hats working on scaffolding against a bright clear sky",
+    "why_relevant": "Site operations and working-at-height safety. Provenance: East African scaffolding scene; landscape 6000x4000."
+  },
+  {
+    "slot": "contact-team",
+    "photo_id": 32467382,
+    "url": "https://images.pexels.com/photos/32467382/pexels-photo-32467382.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "landscape",
+    "subject": "Group of construction workers in high-visibility vests and hard hats standing together in front of scaffolding under a clear sky.",
+    "alt": "Group of construction workers in high-visibility vests and hard hats standing together on site",
+    "why_relevant": "Professional local crew portrait for the contact page."
+  },
+  {
+    "slot": "quote-engineer",
+    "photo_id": 8487393,
+    "url": "https://images.pexels.com/photos/8487393/pexels-photo-8487393.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "portrait",
+    "subject": "Two engineers in hard hats and reflective vests standing together in a bright construction setting.",
+    "alt": "Two engineers in hard hats and safety vests standing together on a construction site",
+    "why_relevant": "Professional engineer portrait for the quote request section; landscape orientation."
+  },
+  {
+    "slot": "spare-1",
+    "photo_id": 39382227,
+    "url": "https://images.pexels.com/photos/39382227/pexels-photo-39382227.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "landscape",
+    "subject": "Rows of solar photovoltaic panels on a grassy plot with a rural ridge line and clear sky behind.",
+    "alt": "Rows of solar photovoltaic panels on a grassy plot with a rural ridge line and clear sky behind",
+    "why_relevant": "Spare for solar / renewable-energy content. Provenance: Southern African rural solar array; landscape."
+  },
+  {
+    "slot": "spare-2",
+    "photo_id": 17321814,
+    "url": "https://images.pexels.com/photos/17321814/pexels-photo-17321814.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "landscape",
+    "subject": "Electrician in a bucket lift repairing overhead power lines against a clear blue sky.",
+    "alt": "Electrician in a bucket lift repairing overhead power lines against a clear blue sky",
+    "why_relevant": "Spare for power distribution and maintenance content; landscape."
+  },
+  {
+    "slot": "spare-3",
+    "photo_id": 36574302,
+    "url": "https://images.pexels.com/photos/36574302/pexels-photo-36574302.jpeg?auto=compress&cs=tinysrgb&w=1800",
+    "orientation": "portrait",
+    "subject": "Group of construction workers in hi-vis vests and hard hats collaborating outdoors, one holding a tablet.",
+    "alt": "Group of construction workers in hi-vis vests and hard hats collaborating outdoors while holding a tablet",
+    "why_relevant": "Spare for team or coordination imagery. Portrait orientation (noted). Provenance: West African construction team."
+  }
+]

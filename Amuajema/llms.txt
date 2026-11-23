@@ -1,0 +1,32 @@
+# Amuajema Contractors
+
+> Amuajema Contractors is the public-facing brand of AMUAJEMA LIMITED, a local Tanzanian specialist civil contractor registered with the Contractors Registration Board.
+
+## Company facts
+- Legal name: AMUAJEMA LIMITED
+- Registration number: SPC3/1273/02/2022
+- Contractor type: Specialist Civil
+- Class: 3
+- Category: Local
+- Managing Director: Jane Shedaffa
+- Address: Plot No. 426 Block D, Nyegezi, Malimbe, Mwanza, Tanzania
+- Postal address: P.O. Box 110311, Mwanza
+- Phone: +255 754 068 145
+- Email: erickfbyn@gmail.com
+
+## Services
+- Building construction
+- Specialist civil works and external works
+- Renovation and fit-out
+- Maintenance and project support
+
+## Public pages
+- Home: /
+- Services: /services.html
+- Projects: /projects.html
+- About: /about.html
+- Contact: /contact.html
+- Project enquiry: /quote.html
+
+## Source
+The company facts above are based on the Contractors Registration Board public profile: https://www.crb.go.tz/contractordetails/home/show/609

@@ -1,0 +1,8 @@
+{
+  "siteId": "3f7b1a7e-5c62-4d5e-9b2b-8a41d0c6f1e2",
+  "name": "AAD Group (T) Ltd",
+  "preview": "https://aad-group-t-ltd-yteunr-preview.freebuff.site",
+  "production": "https://aad-group-t-ltd-yteunr.freebuff.site",
+  "manifest": "cloudflare/manifest.json",
+  "assets": "dist/"
+}

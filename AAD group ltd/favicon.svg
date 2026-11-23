@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AAD Group">
+  <defs>
+    <linearGradient id="accent" x1="6" y1="58" x2="58" y2="6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f8fd8f"/>
+      <stop offset="0.36" stop-color="#d9ff9c"/>
+      <stop offset="0.7" stop-color="#b3ffa8"/>
+      <stop offset="1" stop-color="#6ef0b0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="32" cy="66" r="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f8fd8f" stop-opacity="0.5"/>
+      <stop offset="0.55" stop-color="#b3ffa8" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#131314" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="frame">
+      <rect width="64" height="64" rx="15"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="64" height="64" fill="#131314"/>
+    <rect width="64" height="64" fill="url(#glow)"/>
+  </g>
+  <path d="M17 47 32 17l15 30" fill="none" stroke="url(#accent)" stroke-width="5.5" stroke-linejoin="miter"/>
+  <path d="M24.5 37.5h15" fill="none" stroke="url(#accent)" stroke-width="5.5"/>
+</svg>

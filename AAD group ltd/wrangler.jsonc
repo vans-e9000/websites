@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "aad-group-ltd",
+  "main": "./cloudflare/worker.js",
+  "compatibility_date": "2026-11-18",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    // Serve the .html files exactly as linked (no 307 to extension-less URLs).
+    "html_handling": "none"
+  }
+}

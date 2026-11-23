@@ -1,0 +1,1267 @@
+# Performance Medicine For Men​​​​‌﻿‍﻿​‍​‍‌‍﻿﻿‌﻿​‍‌‍‍‌‌‍‌﻿‌‍‍‌‌‍﻿‍​‍​‍​﻿‍‍​‍​‍‌﻿​﻿‌‍​‌‌‍﻿‍‌‍ - Style Reference
+> Extracted 2026-11-04 from https://www.rugiet.com/?ref=land-book.com
+
+**Theme:** light
+
+Performance Medicine For Men​​​​‌﻿‍﻿​‍​‍‌‍﻿﻿‌﻿​‍‌‍‍‌‌‍‌﻿‌‍‍‌‌‍﻿‍​‍​‍​﻿‍‍​‍​‍‌﻿​﻿‌‍​‌‌‍﻿‍‌‍ (www.rugiet.com) reads as a light, flat interface built on a mainFont/-apple-system type pairing. Structurally it relies on fully-rounded pill shapes as its signature geometry, and surfaces stay flat and separated by whitespace rather than elevation - while brand accent (#ffa200) carries the interactive energy. Motion is measured and smooth, averaging 396ms on interactive transitions. Typography runs from 9px up to 48px across 9 steps, and the spacing system sits on a 2-unit base with 12px container padding.
+
+## Contents
+
+- [At a Glance](#at-a-glance)
+- [Tokens - Colors](#tokens-colors)
+- [Tokens - Typography](#tokens-typography)
+- [Iconography](#iconography)
+- [Tokens - Spacing & Shapes](#tokens-spacing-shapes)
+- [Effects & Treatments](#effects-treatments)
+- [Tokens - Motion](#tokens-motion)
+- [Design Token System](#design-token-system)
+- [Scroll & Reveal Motion](#scroll-reveal-motion)
+- [Micro-interactions](#micro-interactions)
+- [Component State Matrix](#component-state-matrix)
+- [Components](#components)
+- [Component Census](#component-census)
+- [Component API Sketch](#component-api-sketch)
+- [Starter Components](#starter-components)
+- [Do's and Don'ts](#dos-and-donts)
+- [Surfaces](#surfaces)
+- [Elevation](#elevation)
+- [Imagery](#imagery)
+- [Assets & Media](#assets-media)
+- [Layout](#layout)
+- [Page Blueprint](#page-blueprint)
+- [Grid & Composition](#grid-composition)
+- [Landing Page Anatomy](#landing-page-anatomy)
+- [Hero & Conversion](#hero-conversion)
+- [Signature Devices](#signature-devices)
+- [Content & Copy](#content-copy)
+- [Accessibility Profile](#accessibility-profile)
+- [Responsive](#responsive)
+- [Responsive Behaviour](#responsive-behaviour)
+- [Agent Prompt Guide](#agent-prompt-guide)
+- [Quick Start](#quick-start)
+- [Rebuild Checklist](#rebuild-checklist)
+- [Extraction Coverage](#extraction-coverage)
+- [Known Gaps](#known-gaps)
+
+## At a Glance
+
+The decisions that define this design. Everything below expands on these.
+
+| Aspect | Value |
+|--------|-------|
+| Theme | light, comfortable density |
+| Core colors | canvas `#ffffff`, surface `#0000001f`, text `#000000` (21:1), accent `#ffa200` |
+| Display type | mainFont 700, 48px / 1, -0.48px tracking |
+| Body type | mainFont 400, 16px / 1.5 |
+| Corner radius | 10px cards, 16px cards, 20px tags, pills (9999px) |
+| Spacing | 2px base unit, 1080px container, 68px between sections, 12px card padding |
+| Elevation | flat - no shadows in regular use |
+| Motion | 300ms default with `cubic-bezier(0.40, 0.00, 0.20, 1.00)`, honours reduced motion |
+| Breakpoints | 400px, 448px, 600px, 640px, 768px, 1000px |
+| Page flow | Hero → Content section → Logo wall / social proof → Content section → Content section → Logo wall / social proof → Content section → Content section → Logo wall / social proof |
+| Built with | Tailwind CSS, Next.js, Lenis |
+
+## Tokens - Colors
+
+| Name | Value | Token | Role |
+|------|-------|-------|------|
+| Canvas | `#ffffff` | `--color-bg-canvas` | Page background - the base layer every other surface floats on · 51.44% of usage |
+| Primary Text | `#000000` | `--color-text-primary` | Primary copy, headings, high-emphasis UI labels - 21.0:1 against canvas · 29.98% of usage |
+| Inverse Text | `#ffffff80` | `--color-text-inverse` | Copy on dark / inverse bands (footer, dark hero) - not for use on the canvas · 0.48% of usage |
+| Brand Accent | `#ffa200` | `--color-accent` | Primary interactive color - buttons, links, key fills carry the brand energy · 1.08% of usage |
+| Surface | `#0000001f` | `--color-bg-surface` | Elevated container fill - cards, nav bars, panels sitting on the canvas · 1.8% of usage |
+| Border | `#1c1917` | `--color-border` | Hairline separators and card outlines · 7.55% of usage |
+| Border Strong | `#d5d3d1` | `--color-border-strong` | Higher-emphasis outlines · 3% of usage |
+| Gray Near-black | `#292524` | `--color-gray-deep` | Supporting surface / fill color · 1.32% of usage |
+| Gray Light | `#ffffff40` | `--color-gray-light` | Supporting border color · 1.08% of usage |
+| Gray Light 2 | `#d6d3d140` | `--color-gray-light-2` | Supporting surface / fill color · 0.84% of usage |
+| Gray Light 3 | `#e7e5e4` | `--color-gray-light-3` | Supporting surface / fill color · 0.84% of usage |
+| Gray Near-black 2 | `#00000066` | `--color-gray-deep-2` | Supporting surface / fill color · 0.6% of usage |
+
+**Gradients in use:**
+- `linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255))` (44 uses)
+- `linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0))` (8 uses)
+- `linear-gradient(rgb(255, 162, 0), rgb(255, 162, 0))` (6 uses)
+
+## Tokens - Typography
+
+### mainFont - display+body family
+- **Weights:** 400, 700
+- **Sizes:** 48px, 40px, 36.5px, 30px, 24px, 20px, 18px, 16px
+- **Role:** Workhorse family - used for both display headlines and body/UI text across weights 400/700.
+
+### -apple-system - supporting family
+- **Weights:** 700
+- **Sizes:** 14px
+- **Role:** Supporting family for accents and specialized text.
+
+### Review - supporting family
+- **Weights:** 700
+- **Sizes:** 18px
+- **Role:** Supporting family for accents and specialized text.
+
+### secondaryFont - supporting family
+- **Weights:** 900
+- **Sizes:** 14px
+- **Role:** Supporting family for accents and specialized text.
+
+### Type Scale
+
+| Role | Size | Line Height | Letter Spacing | Weight | Family |
+|------|------|-------------|----------------|--------|--------|
+| display | 48px | 1 | -0.48px | 700 | mainFont |
+| heading-xl | 40px | 1 | -0.4px | 700 | mainFont |
+| heading | 24px | 1.15 | 0.24px | 700 | mainFont |
+| heading-sm | 20px | 1.1 | -0.2px | 700 | mainFont |
+| subheading | 18px | 1 | 0.18px | 700 | Review |
+| body | 16px | 1.5 | - | 400 | mainFont |
+| small | 14px | 1.35 | 0.14px | 400 | mainFont |
+| caption | 11px | 1.35 | 0.11px | 400 | mainFont |
+| micro | 9px | 1.3 | -0.09px | 400 | monoFont |
+
+## Iconography
+
+- **Style:** outline, 0px strokes, round caps
+- **Size scale:** 20 / 24px (59 icons measured)
+- **Delivery:** inline SVG
+- **Illustration:** 3 larger vector graphics present (spot/ambient illustration is part of the language)
+
+## Tokens - Spacing & Shapes
+
+**Density:** comfortable
+
+### Border Radius
+
+| Context | Value | Usage |
+|---------|-------|-------|
+| card | 16px | 50 elements |
+| button | pill (fully rounded, 200px) | 25 elements |
+| tag | 20px | 15 elements |
+
+### Layout
+
+- **Page max-width:** 1080px
+- **Section gap:** 68px
+- **Card padding:** 12px
+- **Element gap:** 8px
+- **Spacing base unit:** 2px
+
+## Effects & Treatments
+
+- **Glassmorphism:** `backdrop-filter: blur(12px)` (13 surfaces) - frosted translucent panels
+- **Gradients:** linear �-65
+- **Masks & shapes:** 0 masked elements, 1 clip-paths
+- **Blend modes:** background-normal, normal �-6, luminosity �-4 (duotone/tinting treatment)
+- **Filters:** 56 filtered elements
+
+## Tokens - Motion
+
+### Duration scale
+
+| Token | Value | Use |
+|-------|-------|-----|
+| `--duration-base` | 300ms | default UI transitions (18 observed) |
+| `--duration-moderate` | 500ms | panels, accordions, toasts (4 observed) |
+| `--duration-slow` | 21000ms | hero reveals, page-level (3 observed) |
+
+### Easing
+
+| Token | Value | Character |
+|-------|-------|-----------|
+| `--ease-in-out-standard` | `cubic-bezier(0.40, 0.00, 0.20, 1.00)` | used 289�- |
+| `--ease-custom-2` | `cubic-bezier(0.44, 0.24, 0.16, 1.00)` | used 50�- |
+| `--ease-custom-3` | `ease` | used 43�- |
+| `--ease-custom-4` | `ease-in-out` | used 23�- |
+| `--ease-custom-5` | `linear` | used 3�- |
+
+### Animation recipes (paste-ready)
+
+```css
+/* transition: opacity - trigger: state change; 500ms cubic-bezier(0.4, 0, 0.2, 1); target: img.object-[var(--hotspot-x)_var(- */
+/* ticker - trigger: on load; 21000ms linear, infinite */
+@keyframes ticker {
+  from { transform: none; }
+  to { transform: translate(-100%); }
+}
+/* ticker - trigger: on load; 51200ms linear, infinite */
+@keyframes ticker {
+  from { transform: none; }
+  to { transform: translate(-100%); }
+}
+/* animation: translate - trigger: scroll; 300ms cubic-bezier(0.4, 0, 0.2, 1); target: div.transition-all */
+/* animation: border-bottom-color - trigger: scroll; 300ms ease-in-out; target: button.button */
+/* animation: border-left-color - trigger: scroll; 300ms ease-in-out; target: button.button */
+```
+
+**Reduced motion:** the site defines `prefers-reduced-motion` overrides - replicate them.
+
+## Design Token System
+
+**Naming fingerprint:** bespoke - these 74 custom properties match no framework convention (Tailwind, shadcn/ui, MUI, Chakra, Bootstrap, Ant, Mantine, Material 3 and Open Props were all tested), and read as hand-authored: `--PhoneInput-color--focus`, `--PhoneInputCountryFlag-aspectRat…`, `--PhoneInputCountryFlag-backgroun…`, `--PhoneInputCountryFlag-borderCol…`, `--PhoneInputCountryFlag-borderCol…`.
+
+**Scopes captured:** `:root` → light (61 vars) · `.theme-dark, :is(.theme-dark, .th…` → dark (10 vars) · `.theme-forbes` → forbes (7 vars) · `.theme-charcoal` → charcoal (4 vars).
+
+### Variable groups
+
+| Group | Kind | Count | Examples |
+|---|---|---|---|
+| `--header-height` | other | 8 | `--header-height: clamp(calc(va…` `--header…` |
+| `--header-logo` | size | 4 | `--header-logo-wid…: 33px` `--header-logo-w…` |
+| `--v-space-small` | other | 4 | `--v-space-small: clamp(calc(va…` `--v-spac…` |
+| `--button-hover` | color | 3 | `--button-hover-bg: transparent` `--button-…` |
+| `--v-space-xs` | other | 3 | `--v-space-xs-desk…: 40` `--v-space-xs-desk…` |
+| `--gutter-desktop` | other | 2 | `--gutter-desktop: 20` `--gutter-desktop-…:…` |
+| `--margin-desktop` | other | 2 | `--margin-desktop: 20` `--margin-desktop-…:…` |
+| `--PhoneInputCountryFlag…` | mixed | 2 | `--PhoneInputCount…: #00000080` `--PhoneInp…` |
+| `--PhoneInputCountrySele…` | other | 2 | `--PhoneInputCount…: currentColor` `--Phone…` |
+| `--v-space` | space | 2 | `--v-space: clamp(calc(va…` `--v-space-xs: …` |
+| `--v-space-desktop` | other | 2 | `--v-space-desktop: 100` `--v-space-desktop…` |
+| `(ungrouped)` | mixed | 35 | `--PhoneInput-colo…: var(--color-m…` `--Pho…` |
+
+### Light / dark overrides
+
+| Variable | Light | Dark | Uses |
+|---|---|---|---|
+| `--color-bg` | `var(--color-light-gre…` | `var(--color-dark)` | 7 |
+| `--color-text` | - | `var(--color-light)` | 4 |
+| `--color-light-grey` | `var(--color-light)` | `var(--color-charcoal)` | 3 |
+| `--color-light-grey-2` | - | `#292524` | 1 |
+| `--button-bg` | `#00000000` | `var(--color-ds2-neutr…` | 0 |
+| `--button-border` | `#00000000` | `var(--color-ds2-neutr…` | 0 |
+| `--button-color` | `var(--color-bg)` | `var(--color-ds2-neutr…` | 0 |
+| `--button-hover-bg` | `#00000000` | `var(--color-ds2-neutr…` | 0 |
+| `--button-hover-border` | `#00000000` | `var(--color-ds2-neutr…` | 0 |
+| `--button-hover-color` | `var(--color-bg)` | `var(--color-ds2-neutr…` | 0 |
+
+**Tokenised coverage:** 34% of the page's most-used colours resolve to a variable - variables exist, but most colour on the page is written literally, so treat the block below as a starting point rather than the source of truth.
+
+### Paste-ready token block
+
+```css
+:root {
+  /* color */
+  --color-sex-score-accent: #ffa200;
+  --button-bg: transparent;
+  --button-border: transparent;
+  --button-hover-bg: transparent;
+  --button-hover-border: transparent;
+  --PhoneInputCountryFlag-borderColor: #00000080;
+  --swiper-theme-color: #007aff;
+  --PhoneInputCountryFlag-backgroundColor--loading: #0000001a;
+  /* size */
+  --sp-default-m: 30px;
+  --sp-slim-m: 15px;
+  --sp-wide-m: 45px;
+  --header-logo-width: var(--header-logo-width-mobile);
+  --header-logo-width-desktop: 27px;
+  --header-logo-width-desktop-large: 27px;
+  --header-logo-width-mobile: 33px;
+  --PhoneInputCountryFlag-borderWidth: 1px;
+  --PhoneInputCountryFlag-height: 1em;
+  --PhoneInputCountrySelect-marginRight: .35em;
+  --PhoneInputCountrySelectArrow-width: .3em;
+  --PhoneInputCountrySelectArrow-borderWidth: 1px;
+  --PhoneInputCountrySelectArrow-marginLeft: var(--PhoneInputCountrySelect-marginRight);
+  /* duration */
+  --speed-fast: .15s;
+  --speed-md: .3s;
+  --speed-slow: .6s;
+  --speed-stagger: 50ms;
+  /* opacity */
+  --PhoneInputCountrySelectArrow-opacity: .45;
+  --PhoneInputInternationalIconGlobe-opacity: .65;
+  --PhoneInputInternationalIconPhone-opacity: .8;
+  /* other */
+  --color-bg: var(--color-light-grey);
+  --gutter-desktop: 20;
+  --gutter-desktop-large: 20;
+  --gutter-mobile: 10;
+  --header-height-desktop: 80;
+  --header-height-desktop-large: 80;
+  --header-height-expanded-desktop: 80;
+  --header-height-expanded-desktop-large: 80;
+  --header-height-expanded-mobile: 66;
+  --header-height-mobile: 66;
+  --margin-desktop: 20;
+  --margin-desktop-large: 20;
+  --margin-mobile: 10;
+  --PhoneInputCountryFlag-aspectRatio: 1.5;
+  --PhoneInputCountrySelectArrow-color: currentColor;
+  --PhoneInputCountrySelectArrow-transform: rotate(45deg);
+  --v-space-desktop: 100;
+  --v-space-desktop-large: 100;
+  --v-space-mobile: 100;
+  --v-space-small-desktop: 60;
+  --v-space-small-desktop-large: 80;
+  --v-space-small-mobile: 50;
+  --v-space-xs-desktop: 40;
+  --v-space-xs-desktop-large: 40;
+  --v-space-xs-mobile: 40;
+  --button-color: var(--color-bg);
+  --button-hover-color: var(--color-bg);
+}
+```
+
+### Dark theme override
+
+Only the 1 variable that actually change are listed - the other 4 are byte-identical to `:root` and inherit from it. Paste this after the block above.
+
+```css
+.theme-dark {
+  /* color */
+  --color-light-grey-2: #292524;
+}
+```
+
+**Caveats:** 21 component/width-scoped var blocks skipped
+
+## Scroll & Reveal Motion
+
+The page reveals content as it scrolls. Measured over a full end-to-end scroll pass:
+
+- **fade in** - 38 elements (64% of 59 reveals)
+- **slide up** - 11 elements (19% of 59 reveals)
+
+**Stagger:** siblings do not fire together - each one starts 25ms after the last. Reproduce it with an index-based delay, not one shared animation.
+
+### Reveal inventory
+
+| Animation | Properties | Duration | Easing | Target |
+|---|---|---|---|---|
+| `opacity` | `opacity` | 500ms | `cubic-bezier(0.4, 0, 0.2,…` | `img.object-[var(--hotsp…` �-36 |
+| `translate` | `translate` | 300ms | `cubic-bezier(0.4, 0, 0.2,…` | `div.transition-all` �-7 |
+| `border-bottom-color` | `border-bottom-color` | 300ms | `ease-in-out` | `button.button` �-2 |
+| `border-left-color` | `border-left-color` | 300ms | `ease-in-out` | `button.button` �-2 |
+| `border-right-color` | `border-right-color` | 300ms | `ease-in-out` | `button.button` �-2 |
+| `border-top-color` | `border-top-color` | 300ms | `ease-in-out` | `button.button` �-2 |
+| `color` | `color` | 300ms | `ease-in-out` | `button.button` �-2 |
+| `color` | `color` | 300ms | `cubic-bezier(0.4, 0, 0.2,…` | `header.main-header` �-2 |
+
+### Paste-ready reveal CSS
+
+```css
+.reveal {
+  opacity: 0;
+}
+.reveal.is-visible {
+  animation: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+/* stagger: set --i on each sibling (0, 1, 2 …) */
+.reveal.is-visible { animation-delay: calc(var(--i, 0) * 25ms); }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal.is-visible { animation: none; opacity: 1; }
+}
+```
+
+### How to wire it
+
+- Observe with a single `IntersectionObserver` at `threshold: 0.15` and `rootMargin: "0px 0px -10% 0px"`, add `is-visible`, then `unobserve` - every measured reveal fired once on entry, none replayed on scroll-back.
+- Stagger by writing `--i` on each child (index order) so the delay is `25ms �- index` - the measured step.
+- The page already declares `prefers-reduced-motion` overrides - ship the guard above; without it the rebuild is less accessible than the original.
+- A smooth-scroll library is present (Lenis) - scroll position is virtualised, so native `IntersectionObserver` roots may need the library's container.
+- 1 in-page anchor link navigate between bands, so scroll-margin on section targets matters.
+
+## Micro-interactions
+
+### Declared transitions
+
+| Properties | Duration | Easing | Applies to |
+|------------|----------|--------|------------|
+| `opacity` | 500ms | `cubic-bezier(0.4, 0, 0.2, 1)` | element (207 elements) |
+| `color, background-color, border-color, outline-color, text-d` | 300ms | `cubic-bezier(0.4, 0, 0.2, 1)` | link (39 elements) |
+| `opacity, transform` | 650ms | `cubic-bezier(0.44, 0.24, 0.16, 1)` | element (33 elements) |
+| `background-size` | 600ms | `ease` | element (31 elements) |
+| `background, border, opacity, color, box-shadow, transform` | 300ms | `ease-in-out` | button (17 elements) |
+| `transform` | 300ms | `cubic-bezier(0.44, 0.24, 0.16, 1)` | element (17 elements) |
+| `opacity` | 300ms | `cubic-bezier(0.4, 0, 0.2, 1)` | link (15 elements) |
+| `background-size, color, opacity` | 600ms | `ease` | element (12 elements) |
+
+### Hover states (from live stylesheets)
+
+- `.group-hover\/card\:opacity-40:is(:where(.group\/card):hover *)` (6 elements) → opacity: 0.4
+- `.hover\:bg-black\/55:hover` (3 elements) → background-color: rgba(0, 0, 0, 0.55)
+- `.hover\:bg-black\/55:hover` (3 elements) → background-color: color-mix(in oklab,var(--color-black) 55%,transparent)
+- `.hover\:bg-light-grey\!:hover` (7 elements) → background-color: var(--color-light-grey)
+- `.hover\:bg-text\!:hover` (4 elements) → background-color: var(--color-text)
+- `.hover\:text-bg\!:hover` (4 elements) → color: var(--color-bg)
+- `.hover\:text-main:hover` (6 elements) → color: var(--color-main)
+- `.hover\:opacity-50:hover` (1 elements) → opacity: 0.5
+
+### Interaction patterns
+
+- **Sticky regions:** 1 sticky elements (headers or section rails)
+- **Hover language:** predominantly *tint* (73% of 60 hover rules)
+- **Cursor language:** pointer, auto
+- **Treated imagery:** 4 filtered/blended images (duotone or tinted treatment)
+
+## Component State Matrix
+
+### Actions
+
+**Primary button** - 10 instances · exemplar `a.button` · measured 264�-48px
+
+| State | Other |
+|---|---|
+| **Base** | radius 200px · padding 0px 20px |
+| Disabled | opacity 0.35 |
+
+Transition recipe: `transition: background 0.3s ease-in-out, border 0.3s ease-in-out, opacity 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform … ease-in-out …`
+
+_Also changed but not modelled here: `cursor`, `pointer-events`._
+
+**Secondary button** - 7 instances · exemplar `button.transition` · measured 89�-25px
+
+| State | Background |
+|---|---|
+| **Base** | `#d5d3d1` |
+| Hover | #fff |
+
+Transition recipe: `transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), outline-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), text-… 0.3s cubic-bezier(0.4,…`
+
+**Secondary button** - 7 instances · exemplar `button.button` · measured 139�-48px
+
+| State | Other |
+|---|---|
+| **Base** | radius 200px · padding 0px 20px |
+| Disabled | opacity 0.35 |
+
+Transition recipe: `transition: background 0.3s ease-in-out, border 0.3s ease-in-out, opacity 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, transform … ease-in-out …`
+
+_Also changed but not modelled here: `cursor`, `pointer-events`._
+
+### Interaction language
+
+- **Hover language:** dominantly *color*. Of the 1 of 9 archetypes that respond to hover, 100% shift color (one archetype can move several at once); 8 archetypes change nothing on hover.
+- **Focus policy:** no measurable focus styling was resolved on any archetype - add a visible ring when rebuilding; this is an accessibility defect to fix, not a style to copy.
+- **Tap targets:** median 104�-48px over 109 interactive elements; 55 (50%) fall under the 44px guidance - smallest: `a.sr-only` 1�-1px, `a.pointer-events-auto` 72�-8px.
+- **Cursor language:** Link → `pointer`, Nav item → `pointer`, Primary button → `pointer`, Secondary button → `pointer`. 74 non-interactive elements also carry `cursor: pointer` - the page signals clickability broadly.
+
+## Components
+
+### Filled #1c1917 button
+**Role:** primary action
+
+#1c1917 background, #ffffff text, border-radius 200px, padding 0px 20px, mainFont 700 14px, 1px solid rgb(28, 25, 23) border. Transitions: background, border, opacity, color, box-shadow, transform 0.3s, 0.3s, 0.3s, 0.3s, 0.3s, 0.3s.
+
+### Filled #d6d3d100 button
+**Role:** secondary variant (7 instances)
+
+#d6d3d100 background, #1c1917 text, border-radius 200px, padding 0px 20px, mainFont 700 14px, 1px solid rgb(28, 25, 23) border. Transitions: background, border, opacity, color, box-shadow, transform 0.3s, 0.3s, 0.3s, 0.3s, 0.3s, 0.3s.
+
+### Filled #d5d3d1 button
+**Role:** secondary variant (7 instances)
+
+#d5d3d1 background, #000000 text, border-radius 20px, padding 0px 10px, mainFont 400 11px, 1px solid rgb(213, 211, 209) border. Transitions: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events 0.3s.
+
+### Card - `.z-2` (10 instances)
+
+#0000001f background, border-radius 0px, padding 12px 12px, no shadow.
+
+### Card - `.theme-light-grey` (9 instances)
+
+#ffffff background, border-radius 16px, padding 24px 24px, no shadow.
+
+### Card - `.relative` (7 instances)
+
+#000000 background, border-radius 0px, padding 0px 0px, no shadow.
+
+### Card - `.group` (6 instances)
+
+#292524 background, border-radius 16px, padding 10px 10px, no shadow.
+
+### Text link (46 instances)
+
+#ffffff text, no underline by default, mainFont 400 14px.
+
+### Heading stack
+
+| Level | Sample | Font | Size | Line Height | Tracking |
+|-------|--------|------|------|-------------|----------|
+| H1 | Get clinical-grade confidence | mainFont 700 | 40px | 40.0147px | -0.400147px |
+| H2 | 700k+ men choose Rugiet® | mainFont 700 | 48px | 48px | -0.48px |
+| H3 | Improve performance with Ready | mainFont 700 | 14px | 18.9px | 0.14px |
+| H4 | Faster onset, more reliable re | mainFont 700 | 14px | 18.9px | 0.14px |
+
+## Component Census
+
+Additional UI inventory detected on the page, with a measured exemplar per category:
+
+| Component | Count | Measured exemplar |
+|-----------|-------|-------------------|
+| Stat blocks | 6 | structural |
+| Carousels | 4 | structural |
+
+## Component API Sketch
+
+### Props, from the measured variants
+
+```ts
+// Every union member below was measured on this page. Nothing is invented.
+type ButtonVariant = 'primary' | 'secondary';
+type ButtonSize = 'sm' | 'md';  // measured heights: 25 / 48px
+
+interface ButtonProps {
+  variant?: ButtonVariant;   // "primary" is the default - 10 instances
+  size?: ButtonSize;
+  disabled?: boolean;      // measured disabled state exists
+  children: React.ReactNode;
+}
+
+type CardVariant = 'z-2' | 'theme-light-grey' | 'relative' | 'group';
+interface CardProps {
+  variant?: CardVariant;
+  children: React.ReactNode;
+}
+```
+
+### React + Tailwind, using the measured values
+
+```jsx
+// Primary button - measured: #1c1917 fill, #ffffff text, 200px radius, 0px 20px padding, mainFont 700 14px
+export function Button({ children, ...props }) {
+  return (
+    <button
+      className="inline-flex items-center justify-center font-bold text-sm rounded-[200px] px-5 py-0 bg-[#1c1917] text-[#ffffff] transition-colors duration-[300ms] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1c1917]"
+      {...props}
+    >
+      {children}
+    </button>
+  );
+}
+
+// Card - measured: #0000001f surface, 0px radius, 12px 12px padding, flat, 10 instances
+export function Card({ children }) {
+  return <div className="bg-[#0000001f] rounded-none px-3 py-3">{children}</div>;
+}
+```
+
+_Arbitrary values (`px-[18px]`, `bg-[#4f46e5]`) appear wherever the measured number has no Tailwind scale token - that is deliberate; rounding them to the nearest token changes the design._
+
+## Starter Components
+
+Working React + Tailwind v4 components built from the measured values - the same numbers as the tables above, already wired to the `@theme` tokens in Quick Start. Hover, focus and active classes come from the Component State Matrix. Start here instead of from a blank file.
+
+```tsx
+// Starter components generated by DesignMD from https://www.rugiet.com/?ref=land-book.com on 2026-11-04.
+// Every value below was measured on the page. Needs the Tailwind v4 @theme block from design.md.
+import * as React from 'react';
+
+const cx = (...parts: unknown[]) => parts.filter(Boolean).join(' ');
+
+/* ---------------------------------------------------------------- Button */
+type ButtonVariant = 'primary' | 'secondary';
+
+const buttonBase = 'inline-flex items-center justify-center gap-2 whitespace-nowrap font-display text-small font-bold rounded-full h-12 px-5 transition duration-300 ease-in-out-standard disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none';
+
+const buttonVariants: Record<ButtonVariant, string> = {
+  primary: 'bg-border text-bg-canvas border border-border',  // measured on “Improve performance with Rea”
+  secondary: 'bg-border-strong text-text-primary border border-border-strong hover:bg-bg-canvas',  // measured on “Testosterone”
+};
+
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ButtonVariant;
+}
+
+export function Button({ variant = 'primary', className, ...props }: ButtonProps) {
+  return <button className={cx(buttonBase, buttonVariants[variant], className)} {...props} />;
+}
+
+/* ------------------------------------------------------------------ Card */
+const cardBase = 'bg-bg-surface p-3';
+
+export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+}
+
+export function Card({ className, ...props }: CardProps) {
+  return <div className={cx(cardBase, className)} {...props} />;
+}
+
+/* -------------------------------------------------------------- TextLink */
+export function TextLink({ className, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>) {
+  return <a className={cx('text-bg-canvas font-normal no-underline hover:underline underline-offset-4 transition-colors', className)} {...props} />;
+}
+
+/* ------------------------------------------------------- Layout */
+export function Container({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
+  return <div className={cx('mx-auto w-full max-w-[1080px] px-6', className)} {...props} />;
+}
+
+export function Section({ className, ...props }: React.HTMLAttributes<HTMLElement>) {
+  return <section className={cx('py-12', className)} {...props} />;
+}
+
+/* --------------------------------------------------------------- Heading */
+const headingSizes = {
+  1: 'text-display font-bold',
+  2: 'text-heading-xl font-bold',
+  3: 'text-heading font-bold',
+  4: 'text-heading-sm font-bold',
+} as const;
+
+export function Heading({ level = 1, className, ...props }: React.HTMLAttributes<HTMLHeadingElement> & { level?: 1 | 2 | 3 | 4 }) {
+  const Tag = (["h1","h2","h3","h4"] as const)[level - 1];
+  return <Tag className={cx('font-display text-balance', headingSizes[level], className)} {...props} />;
+}
+```
+
+## Do's and Don'ts
+
+### Do
+- Use `#ffffff` as the canvas and build every surface from the token table above - never invent intermediate grays
+- Use #ffa200 exclusively for interactive moments (buttons, links, key fills) - it is the energy of the system
+- Snap all spacing to the 2px base unit grid
+- Use fully-rounded (pill, 9999px) radii for buttons and tags
+- Default interactive transitions to 300ms with the extracted easing tokens
+
+### Don't
+- Do not introduce colors outside the 12-token palette extracted above
+- Do not add springy/bounce motion - the source uses the timing functions listed under Tokens - Motion
+- Do not stack multiple shadows - keep elevation minimal and let whitespace separate content
+
+## Surfaces
+
+| Level | Name | Value | Purpose |
+|-------|------|-------|---------|
+| 0 | Canvas | `#ffffff` | Page background - the base layer |
+| 1 | Surface | `#0000001f` | Cards, nav bars, panels floating on the canvas |
+| 2 | Accent fill | `#ffa200` | Filled CTAs, highlight containers, brand moments |
+
+## Elevation
+
+- The system is flat - no box shadows in regular use. Depth comes from background contrast and whitespace.
+
+## Imagery
+
+236 raster images and 0 inline SVGs were found. Dominant aspect ratios: 1:1, 0.62:1, 1.23:1, 2.07:1. Photography or rendered imagery carries the visual weight.
+
+## Assets & Media
+
+### Image inventory
+
+| Role | Rendered | Aspect | Fit | Loading | Alt |
+|---|---|---|---|---|---|
+| Background | 1133�-525px · png | 2.16:1 | cover | - | **missing** |
+| Background (above fold) | 1079�-515px @1x · png | 2.1:1 | cover | · srcset | Travel Couple |
+| Content | 429�-429px · jpg | 1:1 | cover | - | **missing** |
+| Content | 429�-429px · jpg | 1:1 | cover | - | **missing** |
+| Content | 429�-429px · png | 1:1 | cover | - | **missing** |
+| Content | 429�-429px · png | 1:1 | cover | - | **missing** |
+| Content | 429�-429px · png | 1:1 | cover | - | **missing** |
+| Content | 429�-429px · png | 1:1 | cover | - | **missing** |
+| Content | 354�-287px · png | 1.23:1 | cover | - | **missing** |
+| Content | 354�-287px · png | 1.23:1 | cover | - | **missing** |
+| Content | 354�-287px · png | 1.23:1 | cover | - | **missing** |
+| Content | 354�-287px · png | 1.23:1 | cover | - | **missing** |
+
+_+120 further images on the page._
+
+**Image pipeline:** 132 images (40 measured in detail); 22% ship a 2�- source; 48% are lazy-loaded; 100% carry alt text; average aspect 2.74:1; formats png �-120, svg �-9, jpg �-3.
+
+### Icon system
+
+The icons fingerprint as **feather** (low confidence) - viewBox 0 0 24 24, stroke-width 0 round. Install that set rather than redrawing: the geometry will match for free. They are stroke-first (66% of shapes are stroked, not filled) - keep `fill: none` and paint with `currentColor` on the stroke.
+
+| Icon property | Measured value |
+|---|---|
+| Icons sampled | 73 |
+| Box sizes | 20 / 24px |
+| Stroke width | 0 |
+| Corners / caps | round |
+| Delivery | inline-svg |
+| Icon fonts | 3 glyphs (generic �-3) |
+
+### Web fonts
+
+| Family | Format | Weight | Display | Host |
+|---|---|---|---|---|
+| Inter (variable) | woff2 | 100 900 | swap | same-origin |
+| Inter Fallback | unknown | normal | - | - |
+| Space Grotesk (variable) | woff2 | 300 700 | swap | same-origin |
+| Space Grotesk Fallback | unknown | normal | - | - |
+| mainFont | woff2 | 400 | swap | same-origin |
+| mainFont | woff2 | 400 | swap | same-origin |
+| mainFont | woff2 | 700 | swap | same-origin |
+| mainFont | woff2 | 700 | swap | same-origin |
+
+_48 `@font-face` rules in total (8 distinct families shown)._
+
+The resolved fallback stacks - copy them verbatim; the fallbacks are what the page shows before the webfont lands:
+
+```css
+--font-body: mainFont, "mainFont Fallback";
+--font-heading: mainFont, "mainFont Fallback";
+--font-mono: monoFont, "monoFont Fallback";
+```
+
+_Headings and body share one family - the hierarchy is carried by weight and size alone._
+
+**Font delivery:** mixed from `same-origin`, `bjjobdlpgglckcmhgmmecijpfobmc…` (@font-face src bjjobdlpgglckcmhgmmecijpfobmcpap; @font-face src bjjobdlpgglckcmhgmmecijpfobmcpap). 48 faces registered, 5 actually loaded and 43 never used - do not ship the dead weights.
+
+**Brand marks:** apple-touch-icon present.
+
+### Rich media
+
+- **Embeds:** 1 iframe (other �-1).
+
+_Asset notes: background-image hunt capped at 1200 elements · 48 @font-face rules declared - listing the first 24 unique faces._
+
+## Layout
+
+Content is centered in a ~1080px max-width container. Sections breathe with ~68px vertical rhythm. Cards use ~12px padding. The hero heading is left-aligned.
+
+## Page Blueprint
+
+```text
+┌──────────────────────────────────────────────────────────┐
+│ HEADER                                    75px · #ffffff │
+├──────────────────────────────────────────────────────────┤
+│ 1. HEADER                                  75px · 11% vh │
+│   #ffffff · 1 col · 957px container                      │
+├──────────────────────────────────────────────────────────┤
+│ 2. HERO                                   515px · 75% vh │
+│   #000000 (dark) · 3 cols · 1046px container             │
+├──────────────────────────────────────────────────────────┤
+│ 3. CONTENT                                204px · 30% vh │
+│   #ffffff · 600px container                              │
+├──────────────────────────────────────────────────────────┤
+│ 4. LOGO WALL                              149px · 22% vh │
+│   #ffffff · 6 cols · full-bleed                          │
+├──────────────────────────────────────────────────────────┤
+│ 5. CONTENT                                180px · 26% vh │
+│   #e8e8e8 · 600px container                              │
+├──────────────────────────────────────────────────────────┤
+│ 6. CONTENT                                672px · 98% vh │
+│   #e8e8e8 · 8 cols · 1046px container                    │
+├──────────────────────────────────────────────────────────┤
+│ 7. CONTENT                                192px · 28% vh │
+│   #ffffff · full-bleed                                   │
+├──────────────────────────────────────────────────────────┤
+│ 8. CONTENT                                476px · 69% vh │
+│   #ffffff · full-bleed                                   │
+├──────────────────────────────────────────────────────────┤
+│ 9. CONTENT                                 70px · 10% vh │
+│   #ffffff · full-bleed                                   │
+├──────────────────────────────────────────────────────────┤
+│ 10. LOGO WALL                             175px · 26% vh │
+│   #ffffff · 6 cols · full-bleed                          │
+├──────────────────────────────────────────────────────────┤
+│ 11. CTA                                   144px · 21% vh │
+│   #e7e5e4 · full-bleed                                   │
+├──────────────────────────────────────────────────────────┤
+│ 12. CONTENT                               284px · 41% vh │
+│   #ffffff · 600px container                              │
+├──────────────────────────────────────────────────────────┤
+│   … 11 further bands below, same rhythm                  │
+├──────────────────────────────────────────────────────────┤
+│ FOOTER                2 columns · 510px · #292524 (dark) │
+└──────────────────────────────────────────────────────────┘
+```
+
+| # | Band | Height | Background | Container | Padding | Columns |
+|---|---|---|---|---|---|---|
+| 1 | Header | 75px (11% vh) | `#ffffff` | 957px / 0px gutter | 0px | 1 |
+| 2 | Hero | 515px (75% vh) | `#000000` dark | 1046px / 0px gutter | 0px | 3 |
+| 3 | Content | 204px (30% vh) | `#ffffff` | 600px / 0px gutter | 48px / 0px | - |
+| 4 | Logo wall | 149px (22% vh) | `#ffffff` | full-bleed | 48px | 6 |
+| 5 | Content | 180px (26% vh) | `#e8e8e8` | 600px / 0px gutter | 48px / 0px | - |
+| 6 | Content | 672px (98% vh) | `#e8e8e8` | 1046px / 0px gutter | 32px / 48px | 8 |
+| 7 | Content | 192px (28% vh) | `#ffffff` | full-bleed | 48px / 0px | - |
+| 8 | Content | 476px (69% vh) | `#ffffff` | full-bleed | 48px | - |
+| 9 | Content | 70px (10% vh) | `#ffffff` | full-bleed | 48px / 0px | - |
+| 10 | Logo wall | 175px (26% vh) | `#ffffff` | full-bleed | 48px | 6 |
+| 11 | CTA | 144px (21% vh) | `#e7e5e4` | full-bleed | 48px | - |
+| 12 | Content | 284px (41% vh) | `#ffffff` | 600px / 0px gutter | 48px / 0px | - |
+| 13 | Content | 842px (123% vh) | `#ffffff` | full-bleed | 17px / 48px | - |
+| 14 | CTA | 81px (12% vh) | `#ffffff` | full-bleed | 17px | - |
+| 15 | Content | 246px (36% vh) | `#ffffff` | 600px / 0px gutter | 48px / 0px | - |
+| 16 | Content | 356px (52% vh) | `#ffffff` | 1046px / 0px gutter | 48px | 3 |
+| 17 | Testimonials | 803px (117% vh) | `#e7e5e4` | 1046px / 0px gutter | 48px | 1 |
+| 18 | Content | 500px (73% vh) | `#000000` dark | 1046px / 0px gutter | 0px | 1 |
+| 19 | Content | 180px (26% vh) | `#ffffff` | 600px / 0px gutter | 48px / 0px | - |
+| 20 | Content | 660px (96% vh) | `#ffffff` | 1046px / 0px gutter | 48px | 3 |
+
+_+3 further bands measured but not tabled._
+
+### Band construction
+
+All 23 bands are built on one shell - 0px side gutters. Height, background and column count are per band and sit in the table above; the bands below need something more.
+
+- **1 · Header** - vertical padding 0px / 0px; inner surfaces use `#000000` on 67% of its elements and `#1c1917` on 17% of its elements; text `#000000` at 21:1 against the band; set in mainFont 400 14px on 80% of its text and mainFont 700 14px on 20% of its text.
+- **2 · Hero** - vertical padding 0px / 0px; a dark band inside a light page - text, borders and button fills all invert here; 3 columns at a 10px row / 17px column gap, items no narrower than 338px; text `#ffffff` at 21:1 against the band; set in mainFont 400 14px on 44% of its text and mainFont 700 14px on 33% of its text.
+- **3 · Content** - vertical padding 48px / 0px; text `#000000` at 21:1 against the band; set in mainFont 700 48px on 50% of its text and mainFont 400 14px on 25% of its text.
+- **4 · Logo wall** - vertical padding 48px / 48px; runs full-bleed, edge to edge; 6 columns at a 0px gap, items no narrower than 1324px.
+- **5 · Content** - vertical padding 48px / 0px; text `#000000` at 17.1:1 against the band; set in mainFont 700 48px on 100% of its text.
+- **6 · Content** - vertical padding 32px / 48px; inner surfaces use `#d5d3d1` on 38% of its elements and `#000000` on 14% of its elements; 8 columns at a 8px row / 6px column gap, items no narrower than 41px; text `#000000` at 17.1:1 against the band; set in mainFont 400 11px on 52% of its text and mainFont 700 14px on 24% of its text.
+- **7 · Content** - vertical padding 48px / 0px; runs full-bleed, edge to edge; text `#000000` at 21:1 against the band; set in mainFont 700 48px on 100% of its text.
+- **8 · Content** - vertical padding 48px / 48px; runs full-bleed, edge to edge; inner surfaces use `#000000` on 100% of its elements; text `#ffffff` at 1:1 against the band; set in Review 700 18px on 50% of its text and mainFont 400 14px on 50% of its text.
+
+### Page chrome
+
+- **Header** - 75px tall, `position: static`, background `#ffffff`, 1046px inner container, 0px side padding.
+- **Footer** - 2 columns (row-cluster), column widths 414 / 282px, 510px tall, background `#292524` (dark band), padding 17px / 17px, 1046px inner container.
+
+## Grid & Composition
+
+**Container widths:** 1040px on 8 bands · 600px on 6 bands · 960px on 1 band. The widest measured column is 1040px - build the shell at that width and let narrower bands opt down.
+
+### Grid recipes
+
+| Where | Display | Columns | Gap | Align / justify |
+|---|---|---|---|---|
+| `div.header-break:col-span-11` | flex / row | 1 | 0px | center / space-between |
+| `div.-mb-gutter` | grid | 3 · `repeat(3, 1fr)` | 10px row / 17px column | normal / normal |
+| `div.flex` | flex / row | 6 | 0px | center / center |
+| `div.flex` | flex / row | 8 | 8px row / 6px column | normal / normal |
+| `div.flex` | flex / row | 6 | 0px | center / center |
+| `div.gap-x-gutter` | grid | 3 · `repeat(3, 1fr)` | 17px | normal / normal |
+| `div.mb-v-space-sm` | flex / column | 1 | 16px row / 0px column | center / normal |
+| `div.flex` | flex / column | 1 | 0px | normal / space-between |
+| `div.gap-x-gutter` | grid | 3 · `repeat(3, 1fr)` | 17px | normal / normal |
+| `div.slider-container` | flex / row | 6 | 0px row / 17px column | normal / normal |
+
+_+6 further measured containers._
+
+- **Deliberate offsets:** 3 of 187 sampled elements carry a real translate (`div.body-large` -1680px x, `div` 50px y) - the stagger is designed, not accidental.
+
+### Z-index layer stack
+
+| z | Role | Position | Element |
+|---|---|---|---|
+| 3 | Decor | absolute | `div.z-3` · 408�-408px |
+| 3 | Decor | absolute | `div.z-3` · 408�-408px |
+| 3 | Decor | absolute | `div.z-3` · 408�-408px |
+| 3 | Decor | absolute | `div.z-3` · 408�-408px |
+| 3 | Decor | absolute | `div.z-3` · 408�-408px |
+| 3 | Decor | absolute | `div.z-3` · 408�-408px |
+| 3 | Decor | absolute | `a.absolute` · 249�-550px |
+| 3 | Decor | absolute | `a.absolute` · 249�-550px |
+| 3 | Decor | absolute | `a.absolute` · 249�-550px |
+| 3 | Decor | absolute | `a.absolute` · 249�-550px |
+
+**Z-index scale in use:** `1` · `2` · `3` - reuse exactly these 3 steps, do not invent intermediate values.
+
+**Vertical rhythm:** bands sit a median -1px apart, most commonly 0px, across 23 bands and section padding clusters at 48px (top: 48px �-16, 16px �-3, 32px �-1).
+
+## Landing Page Anatomy
+
+The page tells a conversion story in this order - rebuild sections in this sequence:
+
+| Order | Section | Heading / evidence | Key elements |
+|-------|---------|--------------------|--------------|
+| 1 | Hero | Get clinical-grade confidence | 7 images |
+| 2 | Content section | 700k+ men choose Rugiet® | 2 images |
+| 3 | Logo wall / social proof | - | 48 images |
+| 4 | Content section | This is the science of never settling | - |
+| 5 | Content section | Ready™ | CTA: "Best Sellers" + "Sex" + "Peptides" · 6 images |
+| 6 | Logo wall / social proof | Backed by leading doctors in performance medicine | - |
+| 7 | Content section | Justin Houman, MD | 15 images |
+| 8 | Content section | Medical Advisory Board Members trained at: | - |
+| 9 | Logo wall / social proof | - | 103 images |
+| 10 | Content section | Explore treatments | CTA: "Explore treatments" |
+| 11 | Content section | Ready™ is the original brain and body ED medication | - |
+| 12 | Content section | 1Faster onset, more reliable resultsReady™ dissolves under t | 1 images |
+| 13 | Content section | Improve performance with Ready | CTA: "Improve performance with R" |
+| 14 | Content section | From consultation to confidence in a couple of days | - |
+| 15 | Logo wall / social proof | Complete a health assessment | 9 images |
+| 16 | Content section | - | - |
+
+**Section flow:** hero → content → logos → content → content → logos → content → content → logos → content → content → content → content → content → logos → content
+
+## Hero & Conversion
+
+- **Headline:** "Get clinical-grade confidence" (left-aligned)
+- **Subheadline:** "Take back your health with treatments designed by board-certified physicians delivered discreetly to your door."
+- **Hero visual:** photo/render (hero block ≈515px tall)
+- **Social proof:** logo wall (160 logos)
+- **Nav anatomy:** logo · 7 links ("Sex", "Peptides", "Testosterone", "Labs", "Sleep"…) · CTA: "All Treatments", "Get Started"
+- **CTA repetition:** "Get Started" �-7, "Learn More" �-6, "Explore treatments" �-2 - the same conversion ask returns at every scroll depth
+- **Full CTA copy inventory:** "Get Started" · "Learn More" · "Explore treatments" · "All Treatments" · "Best Sellers" · "Sex"
+
+## Signature Devices
+
+These patterns define the site's identity - repeat them across every new page:
+
+1. **The Pill Button Language** - every interactive element is fully rounded (9999px radius) - buttons, tags, inputs and badges share one geometry
+2. **The #1c1917 / Ghost Button Pair** - conversion moments always offer two identically-shaped buttons - "Get Started" first, "All Treatments" second; never split them apart
+3. **Single-Accent Discipline** - the entire interactive vocabulary runs on #ffa200 - restraint is the system; adding more hues breaks it
+4. **Card-on-Canvas Contrast** - #0000001f surfaces float on a #ffffff canvas - separation comes from background contrast, not shadows
+
+## Content & Copy
+
+### Copy per band
+
+| Band | Eyebrow | Heading | CTA |
+|---|---|---|---|
+| Navigation | - | - | "All Treatments" + "Get Started" |
+| Hero | - | Get clinical-grade confidence | - |
+| Media | - | 700k+ men choose Rugiet® | - |
+| Content | - | This is the science of never settling | - |
+| Content | - | Ready™ | "Best Sellers" + "Sex" |
+| Logo wall | - | Backed by leading doctors in performance me… | - |
+| Content | - | Justin Houman, MD | - |
+| CTA band | - | - | "Explore treatments" |
+| Content | - | Ready™ is the original brain and body ED me… | - |
+| CTA band | - | - | "Improve performance w…" |
+| Content | - | From consultation to confidence in a couple… | - |
+
+_3 further bands carried no headline copy._
+
+### Navigation copy
+
+- **Items:** "Sex" → `/sex` · "Peptides" → `/peptides` · "Testosterone" → `/testosterone` · "Labs" → `/labs/comprehensive` · "Sleep" → `/sleep/recharge` · "Weight" → `/weight-loss/weigh-in` · "Hair" → `/erectile-dysfunction/g…`
+- **Actions:** "Get Started" (primary) · "Log in" (link) · "All Treatments" (secondary)
+- **Shape:** logo reads "Rugiet" and is an image/SVG, centered alignment, a mobile menu button exists
+
+### Footer columns
+
+- **Treatments** - All Treatments, Sex, Testosterone, Peptides, Sleep, Weight, Hair
+- **Company** - Reviews, Medical Team, Careers, Appreciation Program
+- **Learn** - Science, Blog, Find Your Sex Score
+- **Legal** - Privacy Policy, Terms and Conditions, Telehealth Consent, Privacy Choices, Notice of Privacy Pra…
+- **Support** - FAQ, Log In
+- **Also in the footer** - social: instagram, facebook, youtube, linkedin, twitter, tiktok; legal line "© 2026 Rugiet. All rights reserved."
+
+### FAQ
+
+- "How Do I Know If Rugiet Ready Is Right for Me?"
+- "Rugiet Ready vs Bluechew Gold: Which ED Medication Actually Delivers?"
+
+_Built with `static` disclosures._
+
+### Testimonials
+
+> Rugiet has been an absolute game changer for me. The results are real, consistent, and confidence-boosting. My wife loves the new me.
+
+> Amazing product! It worked well and I (along with my partner) couldn’t be happier. Worth the cost as Rugiet was effective and worked fast.
+
+> I’m very pleased with the results and overall product from this company. Everything is discreet and professional, customer service is top-notch.
+
+**Logo wall:** Men's Health · motion magazine · Esquire · Forbes · Inc. · Time · WebMD · Men's Journal · Stanford · Harvard · Mayo Clinic · UCLA - 12 marks shown as social proof.
+
+### Voice & tone
+
+- **Heading case:** sentence case - 67 sentence, 31 title, 2 upper across 100 headings. Match the dominant one exactly; mixing reads as a different brand.
+- **Heading length:** 4.3 words on average over 48 headings - terse; write short declaratives.
+- **Person:** second person - the copy addresses the reader directly (you �-73, we �-9, i �-18).
+- **Questions:** 2% of headlines are questions.
+- **Reading level:** dense - 30.5 words per sentence, 5.3 letters per word.
+- **Jargon:** low (0% of words).
+- **CTA verbs:** "get" �-2, "explore" �-1 - every button starts with one of these.
+- **Signature phrases:** "performance medicine" �-3, "clinical-grade confidence" �-2, "men choose" �-2, "choose rugiet" �-2, "never settling" �-2, "leading doctors" �-2 - repeat them; they are the vocabulary of the brand.
+- **Punctuation & emoji:** 0 exclamation marks and 8 emojis in the captured copy - stay inside that budget.
+
+**Document metadata:** title "Performance Medicine For Men ™ | Rugiet"; description "From sexual performance to hormone optimization, these are the treatments that deliver."; heading hierarchy H1 �-1 · H2 �-15 · H3 �-29; lang `en`.
+
+## Accessibility Profile
+
+- **Contrast discipline:** 41% of measured text usage clears WCAG AA (4.5:1)
+- **Focus design:** 10 :focus rules in stylesheets
+- **Reduced motion:** `prefers-reduced-motion` overrides present
+- **Skip link:** present (keyboard-first navigation)
+- **Semantics:** 3 landmarks · 196 ARIA-carrying elements · 100% of images have alt text
+
+## Responsive
+
+Breakpoints declared in stylesheets: `28rem`, `40rem`, `48rem`, `64rem`, `80rem`, `96rem`, `120rem`, `400px`, `600px`, `639px`, `640px`, `767px`, `768px`, `1000px`, `1024px`, `1280px`, `1440px`, `1450px`, `1500px`, `1536px`, `2400px`.
+
+Current viewport analyzed at 1094�-687 (desktop-scale view).
+ The site also uses container queries for component-level responsiveness.
+
+## Responsive Behaviour
+
+**Strategy:** mobile-first (`min-width` queries build up) - 277 min-width rules, 4 max-width rules.
+
+**Ladder:** the 12 breakpoints match no standard scale - they are custom to this site.
+
+### Breakpoint matrix
+
+| Tier | Query | Layout | Spacing | Type | Hidden / shown |
+|---|---|---|---|---|---|
+| <xs | `≤400px` | width 2rem | - | line-height 2rem | - |
+| xs | `≥448px` | max-width 28rem | - | - | - |
+| <sm | `≤639px` | - | padding-bottom 0px | font-size 16px | - |
+| md | `≥640px` | 2 col | margin-bottom 0px | font-size var(--text-5x… | −1 |
+| <md | `≤767px` | - | - | font-size 45px | - |
+| md | `≥768px` | flex → column | margin-top calc(var(--s… | font-size 24px | −3 |
+| lg | `≥1000px` | 12 col | padding-top var(--spaci… | - | −2/+2 nav |
+| lg | `≥1024px` | 3 col | margin-right var(--spac… | font-size 64px | −1 |
+
+Across the 12 stops the ladder rewrites 289 declarations in 260 rules, the heaviest being `lg` at 122. Nothing else moves - anything not in the matrix above holds at every width.
+
+### Mobile adaptation
+
+- **Navigation:** is swapped by width rather than by a menu button - `'.header-break\:flex' shown ≥1000…`, `'.header-break\:grid' shown ≥1000…`.
+- **Visibility:** 7 selectors hidden and 2 revealed by width (other, nav).
+
+### Modern CSS in play
+
+- **Container queries** are in use - components size to their container, not the viewport. Port the `@container` rules or the layout will not match at intermediate widths.
+- **`aspect-ratio`** holds media boxes instead of padding hacks.
+- **Intrinsic grids** - `auto-fit` / `minmax()` do the column maths instead of breakpoints.
+- **`prefers-reduced-motion`** is honoured by the page itself - replicate the override, do not drop it.
+- **Feature queries:** `(prefers-reduced-motion: reduce)` - progressive enhancement is deliberate here.
+
+**Fluid type:** sizes interpolate with `clamp()` / viewport units rather than stepping at breakpoints - copy the real expressions:
+
+```css
+font-size: clamp(calc(var(--desktop)*1px),calc(var(--desktop)*1px + (…;
+```
+
+_Caveats: 3 further width conditions were dropped past the 12-breakpoint cap. 1 declared breakpoint value had no capturable declarations (cross-origin or nested stylesheets). rem/em lengths were converted at the assumed 16px root font size._
+
+## Agent Prompt Guide
+
+**Quick Color Reference**
+- canvas: #ffffff
+- primary text: #000000
+- inverse text: #ffffff80
+- brand accent: #ffa200
+- surface: #0000001f
+- border: #1c1917
+- border strong: #d5d3d1
+- gray near-black: #292524
+
+**Example Component Prompts**
+
+1. Rebuild the full landing page in exactly this order: hero → content → logos → content → content → logos → content → content → logos → content → content → content → content → content → logos → content. Use the Hero & Conversion spec for the first screen, one component recipe per section, and the section rhythm from the Layout metrics.
+2. Create the primary button: #1c1917 background, #ffffff text, border-radius 200px, padding 0px 20px, font mainFont 700 14px. On hover, transition background, border, opacity, color, box-shadow, transform 0.3s, 0.3s, 0.3s, 0.3s, 0.3s, 0.3s.
+3. Create a card: #0000001f background, border-radius 0px, padding 12px 12px, no shadow.
+4. Create the display heading: mainFont weight 700, 48px, line-height 1, letter-spacing -0.48px, #000000 on #ffffff.
+
+## Quick Start
+
+### CSS Custom Properties
+
+```css
+:root {
+  /* Colors */
+  --color-bg-canvas: #ffffff;
+  --color-text-primary: #000000;
+  --color-text-inverse: #ffffff80;
+  --color-accent: #ffa200;
+  --color-bg-surface: #0000001f;
+  --color-border: #1c1917;
+  --color-border-strong: #d5d3d1;
+  --color-gray-deep: #292524;
+  --color-gray-light: #ffffff40;
+  --color-gray-light-2: #d6d3d140;
+  --color-gray-light-3: #e7e5e4;
+  --color-gray-deep-2: #00000066;
+
+  /* Typography - Font Families (by role) */
+  --font-display: mainFont, "mainFont Fallback";
+  --font-body: mainFont, "mainFont Fallback";
+  --font-mono: monoFont, "monoFont Fallback";
+
+  /* Typography - Scale */
+  --text-display: 48px;
+  --leading-display: 1;
+  --tracking-display: -0.48px;
+  --text-heading-xl: 40px;
+  --leading-heading-xl: 1;
+  --tracking-heading-xl: -0.4px;
+  --text-heading: 24px;
+  --leading-heading: 1.15;
+  --tracking-heading: 0.24px;
+  --text-heading-sm: 20px;
+  --leading-heading-sm: 1.1;
+  --tracking-heading-sm: -0.2px;
+  --text-subheading: 18px;
+  --leading-subheading: 1;
+  --tracking-subheading: 0.18px;
+  --text-body: 16px;
+  --leading-body: 1.5;
+  --text-small: 14px;
+  --leading-small: 1.35;
+  --tracking-small: 0.14px;
+  --text-caption: 11px;
+  --leading-caption: 1.35;
+  --tracking-caption: 0.11px;
+  --text-micro: 9px;
+  --leading-micro: 1.3;
+  --tracking-micro: -0.09px;
+
+  /* Layout */
+  --page-max-width: 1080px;
+  --section-gap: 68px;
+  --card-padding: 12px;
+  --element-gap: 8px;
+  --spacing-unit: 2px;
+
+  /* Border Radius */
+  --radius-sm: 10px; /* card */
+  --radius-md: 16px; /* card, tag */
+  --radius-lg: 20px; /* tag, button */
+  --radius-full: 9999px; /* pills */
+
+  /* Motion */
+  --duration-base: 300ms;
+  --duration-moderate: 500ms;
+  --duration-slow: 21000ms;
+  --ease-in-out-standard: cubic-bezier(0.40, 0.00, 0.20, 1.00);
+  --ease-custom-2: cubic-bezier(0.44, 0.24, 0.16, 1.00);
+  --ease-custom-3: ease;
+  --ease-custom-4: ease-in-out;
+  --ease-custom-5: linear;
+
+  /* Iconography */
+  --icon-stroke: 0;
+  --icon-size: 24px;
+}
+```
+
+### Tailwind v4
+
+```css
+@import "tailwindcss";
+
+@theme {
+  /* Colors → bg-*, text-*, border-* */
+  --color-bg-canvas: #ffffff;
+  --color-text-primary: #000000;
+  --color-text-inverse: #ffffff80;
+  --color-accent: #ffa200;
+  --color-bg-surface: #0000001f;
+  --color-border: #1c1917;
+  --color-border-strong: #d5d3d1;
+  --color-gray-deep: #292524;
+  --color-gray-light: #ffffff40;
+  --color-gray-light-2: #d6d3d140;
+  --color-gray-light-3: #e7e5e4;
+  --color-gray-deep-2: #00000066;
+
+  /* Fonts → font-display, font-body, font-mono */
+  --font-display: mainFont, "mainFont Fallback";
+  --font-body: mainFont, "mainFont Fallback";
+  --font-mono: monoFont, "monoFont Fallback";
+
+  /* Type scale → text-display, text-body, … */
+  --text-display: 48px;
+  --text-display--line-height: 1;
+  --text-display--letter-spacing: -0.48px;
+  --text-display--font-weight: 700;
+  --text-heading-xl: 40px;
+  --text-heading-xl--line-height: 1;
+  --text-heading-xl--letter-spacing: -0.4px;
+  --text-heading-xl--font-weight: 700;
+  --text-heading: 24px;
+  --text-heading--line-height: 1.15;
+  --text-heading--letter-spacing: 0.24px;
+  --text-heading--font-weight: 700;
+  --text-heading-sm: 20px;
+  --text-heading-sm--line-height: 1.1;
+  --text-heading-sm--letter-spacing: -0.2px;
+  --text-heading-sm--font-weight: 700;
+  --text-subheading: 18px;
+  --text-subheading--line-height: 1;
+  --text-subheading--letter-spacing: 0.18px;
+  --text-subheading--font-weight: 700;
+  --text-body: 16px;
+  --text-body--line-height: 1.5;
+  --text-small: 14px;
+  --text-small--line-height: 1.35;
+  --text-small--letter-spacing: 0.14px;
+  --text-caption: 11px;
+  --text-caption--line-height: 1.35;
+  --text-caption--letter-spacing: 0.11px;
+  --text-micro: 9px;
+  --text-micro--line-height: 1.3;
+  --text-micro--letter-spacing: -0.09px;
+
+  /* Radius → rounded-* */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Easing → ease-* */
+  --ease-in-out-standard: cubic-bezier(0.40, 0.00, 0.20, 1.00);
+  --ease-custom-2: cubic-bezier(0.44, 0.24, 0.16, 1.00);
+  --ease-custom-3: ease;
+  --ease-custom-4: ease-in-out;
+  --ease-custom-5: linear;
+
+  /* Breakpoints → sm:, md:, lg:, … (measured from the source) */
+  --breakpoint-sm: 400px;
+  --breakpoint-md: 448px;
+  --breakpoint-lg: 600px;
+  --breakpoint-xl: 640px;
+  --breakpoint-2xl: 768px;
+}
+
+/* Durations have no Tailwind namespace - use as duration-(--duration-base) */
+:root {
+  --duration-base: 300ms;
+  --duration-moderate: 500ms;
+  --duration-slow: 21000ms;
+}
+```
+
+## Rebuild Checklist
+
+Build in this order. Every item carries the measured numbers it needs - nothing here requires going back to the page.
+
+- [ ] Paste the `:root` block from **Design Token System** - 74 custom properties across 12 naming groups. Nothing below should hard-code a value that exists there.
+- [ ] Add the dark-theme override block - 10 variables change between light and dark.
+- [ ] Set the type scale: 48 / 40 / 24 / 20 / 18 / 16 / 14 / 11 / 9px over 9 steps, mainFont + -apple-system.
+- [ ] Set the spacing scale: 1 / 4 / 8 / 10 / 12 / 14 / 16 / 17px on a 2px base unit.
+- [ ] Set the radius scale: 10px (card), 16px (card), 20px (button), 200px (button).
+- [ ] Build the shell: a 1040px max-width centred container with 0px side gutters, bands separated by 68px.
+- [ ] Paint the canvas `#ffffff` and set the body text colour from the palette - this is a light page.
+- [ ] Build the header: 75px tall, background `#ffffff`.
+- [ ] Fill the nav with the real labels: "Sex", "Peptides", "Testosterone", "Labs", "Sleep", "Weight" plus "Get Started" / "Log in" / "All Treatments" on the right.
+- [ ] Band 1 - **Header**: 75px tall, `#ffffff` background, 957px container, 0px top padding.
+- [ ] Band 2 - **Hero**: 515px tall, `#000000` background, 1046px container, 0px top padding, 3 columns. Headline: "Get clinical-grade confidence".
+- [ ] Band 3 - **Content**: 204px tall, `#ffffff` background, 600px container, 48px top padding. Headline: "700k+ men choose Rugiet®".
+- [ ] Band 4 - **Logo wall**: 149px tall, `#ffffff` background, 48px top padding, 6 columns.
+- [ ] Band 5 - **Content**: 180px tall, `#e8e8e8` background, 600px container, 48px top padding. Headline: "This is the science of never settling".
+- [ ] Band 6 - **Content**: 672px tall, `#e8e8e8` background, 1046px container, 32px top padding, 8 columns. Headline: "Ready™".
+- [ ] Band 7 - **Content**: 192px tall, `#ffffff` background, 48px top padding. Headline: "Backed by leading doctors in performance medicine".
+- [ ] Band 8 - **Content**: 476px tall, `#ffffff` background, 48px top padding. Headline: "Justin Houman, MD".
+- [ ] Band 9 - **Content**: 70px tall, `#ffffff` background, 48px top padding.
+- [ ] Band 10 - **Logo wall**: 175px tall, `#ffffff` background, 48px top padding, 6 columns.
+- [ ] Band 11 - **CTA**: 144px tall, `#e7e5e4` background, 48px top padding. Headline: "Ready™ is the original brain and body ED medication".
+- [ ] Band 12 - **Content**: 284px tall, `#ffffff` background, 600px container, 48px top padding.
+- [ ] Build the primary button: `#1c1917` on `#ffffff` text, 200px radius, 0px 20px padding, mainFont 700 14px - 10 instances on the page.
+- [ ] Build the secondary button: 1px solid #1c1917 border, 200px radius, 0px 20px padding, `#1c1917` text.
+- [ ] Build the card: `#0000001f` surface, 0px radius, 12px 12px padding, no border, flat - 10 instances.
+- [ ] Build the footer: 2 link columns, 510px tall, `#292524` background, 6 social icons.
+- [ ] Wire hover states in the page's own language - *color* on 1 of 9 archetypes. Copy the deltas from the state matrix; do not invent a lift where the page tints.
+- [ ] Wire disabled states on 2 archetypes - copy the exact opacity and cursor from the state matrix rather than graying by eye.
+- [ ] Set the transition recipe: base 300ms, moderate 500ms, slow 21000ms, easing `cubic-bezier(0.40, 0.00, 0.20, 1.00)`.
+- [ ] Wire the scroll reveal: `opacity` on opacity over 500ms with a 25ms stagger, fired once by IntersectionObserver.
+- [ ] Add the breakpoint ladder: ≤400px / ≥448px / ≤639px / ≥640px / ≤767px / ≥768px / ≥1000px / ≥1024px / ≥1280px / ≥1440px / ≥1450px / ≥1500px, mobile-first.
+- [ ] At mobile widths: collapse the nav.
+- [ ] Accessibility polish before shipping: 41% of text already clears 4.5:1 - fix the remainder rather than copying it; 55 tap targets sit under 44px - pad them out.
+
+## Extraction Coverage
+
+What was actually measured, and where the measurement stops. Read this before trusting a number above.
+
+- **Scan:** 2039 elements styled · viewport 1094�-687px · elapsed 9261ms.
+- **Deep pass:** mode `full`, 11 scroll passes over 16 planned steps of 550px.
+- **Page:** 8151px tall (11.9 viewports).
+- **Lazy loading:** DOM went 2403 → 2367 nodes (-36 newly revealed elements).
+- **Virtualised list detected**. Anything measured inside it is a sample, not the whole list.
+- **Frames:** 1 iframe, all readable.
+- **Bands sampled:** 12 viewport-height slices covering the full page.
+- **Stylesheets:** 7 read.
+- **States & overlays:** 0 hidden surfaces revealed and measured; 9 component archetypes resolved from 151 indexed pseudo-state rules; 9 live focus probes.
+- **Inventory:** 23 sections · 16 grid containers · 20 stacking layers · 40 images, 24 font faces · 14 copy bands · 74 custom properties · 12 breakpoints analysed.
+
+### Limits reached during the scan
+
+- scroll pass stopped at step 11 of 16 (time budget)
+- background-image hunt capped at 1200 elements
+- page has 22 top-level sections; first 14 captured
+- 21 component/width-scoped var blocks skipped
+- 3 further width conditions were dropped past the 12-breakpoint cap.
+- 1 declared breakpoint value had no capturable declarations (cross-origin or nested stylesheets).
+
+## Known Gaps
+
+- no visible focus ring resolved on any sampled component
+- assets: background-image hunt capped at 1200 elements
+- assets: 48 @font-face rules declared - listing the first 24 unique faces
+- the page was in a background tab for 8 s of the scan - Chrome slows background tabs and pauses lazy loading, so parts may be missing; rescan with the page in front for the full result
