@@ -1,0 +1,180 @@
+
+/* ===== Hero usability: readable hero text, subtle layered image motion ===== */
+
+/* Subtle, restrained image motion on hero panels.
+   Live images drift a little; recomposed image galleries breathe.
+   Reduced-motion users get a static frame. */
+
+.hero-panel__media,
+.hero-panel__frame,
+.atmos-hero-media {
+  transition:
+    transform 9s cubic-bezier(.4,.05,.2,1),
+    opacity 9s cubic-bezier(.4,.05,.2,1);
+  will-change: transform;
+}
+
+.hero-panel:hover .hero-panel__media,
+.hero-panel:hover .hero-panel__frame,
+.hero-panel:hover .atmos-hero-media {
+  transform: scale(1.04) translateY(-2%);
+}
+
+/* Decorative relief frames inside image sections — gentle reveal, no looping motion */
+.img-relief,
+.img-relief::after,
+.img-relief::before {
+  transition:
+    opacity 550ms cubic-bezier(.4,.05,.2,1),
+    transform 550ms cubic-bezier(.4,.05,.2,1);
+}
+
+.img-relief {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.img-relief.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.img-relief::after,
+.img-relief::before {
+  opacity: 0;
+}
+
+.img-relief.is-visible::after,
+.img-relief.is-visible::before {
+  opacity: 1;
+}
+
+/* If a hero has more than one image layer, recombine them slowly on hover */
+.hero-panel.is-composite {
+  perspective: 900px;
+}
+
+.hero-panel.is-composite .hero-panel__frame,
+.hero-panel.is-composite .atmos-hero-media {
+  transform: rotateX(0deg) scale(1);
+}
+
+.hero-panel.is-composite:hover .hero-panel__frame,
+.hero-panel.is-composite:hover .atmos-hero-media {
+  transform: rotateX(2deg) scale(1.025);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-panel__media,
+  .hero-panel__frame,
+  .atmos-hero-media,
+  .img-relief,
+  .img-relief::after,
+  .img-relief::before {
+    transition: none;
+  }
+
+  .hero-panel:hover .hero-panel__media,
+  .hero-panel:hover .hero-panel__frame,
+  .hero-panel:hover .atmos-hero-media,
+  .img-relief.is-visible,
+  .img-relief.is-visible::after,
+  .img-relief.is-visible::before {
+    transform: none;
+    opacity: 1;
+  }
+
+  .hero-panel.is-composite .hero-panel__frame,
+  .hero-panel.is-composite .atmos-hero-media {
+    transform: none;
+  }
+
+  .hero-panel.is-composite:hover .hero-panel__frame,
+  .hero-panel.is-composite:hover .atmos-hero-media {
+    transform: none;
+  }
+}
+
+/* ============================================================
+   Base text color for every hero text layer
+   ============================================================ */
+
+.hero-copy,
+.atmos-hero .eyebrow,
+.atmos-hero .display,
+.atmos-hero .lead,
+.atmos-hero .h2,
+.atmos-hero .section-sub,
+.atmos-hero .tab-label,
+.atmos-hero .btn-primary,
+.atmos-hero .btn-ghost {
+  color: var(--color-hero-text, #f7f1e6);
+}
+
+/* Underline/shading so the text still reads against bright image areas */
+.atmos-hero .display,
+.atmos-hero .eyebrow,
+.atmos-hero .lead,
+.atmos-hero .h2,
+.atmos-hero .section-sub,
+.atmos-hero .tab-label,
+.atmos-hero .btn-primary,
+.atmos-hero .btn-ghost {
+  text-shadow: 0 2px 0 rgba(2, 6, 10, 0.55);
+}
+
+.atmos-hero .btn-primary,
+.atmos-hero .btn-ghost {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* Keep the active tab underline and the CTA fill from fighting the text */
+.atmos-hero .tab-trigger-bar,
+.atmos-hero .btn-primary {
+  text-shadow: none;
+}
+
+/* CTA fill can stay white when the text is the hero color */
+.atmos-hero .btn-primary {
+  background: var(--color-hero-text, #f7f1e6);
+  color: var(--color-bg-canvas, #ffffff);
+  border-color: var(--color-hero-text, #f7f1e6);
+}
+
+.atmos-hero .btn-primary:hover {
+  background-color: var(--color-accent-strong, #b4934a);
+  border-color: var(--color-accent-strong, #b4934a);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+/* Slightly lift the headline so it sits a touch higher within the hero band */
+.atmos-hero .display,
+.atmos-hero .h2,
+.atmos-hero .lead {
+  transform: translateY(-2px);
+}
+
+/* On small screens, give the headline its own space instead of floating it */
+@media (max-width: 900px) {
+  .atmos-hero .display,
+  .atmos-hero .h2,
+  .atmos-hero .lead {
+    transform: none;
+  }
+}
+
+/* If this is a multi-image hero gallery, keep the headline closer to the top */
+.atmos-hero.is-gallery .display,
+.atmos-hero.is-gallery .h2,
+.atmos-hero.is-gallery .lead {
+  transform: translateY(-6px);
+}
+
+@media (max-width: 900px) {
+  .atmos-hero.is-gallery .display,
+  .atmos-hero.is-gallery .h2,
+  .atmos-hero.is-gallery .lead {
+    transform: none;
+  }
+}
+

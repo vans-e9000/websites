@@ -1,0 +1,145 @@
+# contact.txt — redraw spec for contact.html
+
+## What this page is
+A Jomka contact page for a CRB-registered building and civil engineering contractor in Dodoma, Tanzania. The page is a first face-to-face moment for a customer who has just decided they want a written quotation. Everything on the page answers one question: "how do I contact you, and what should I prepare before I contact you?"
+
+## Pages that are out of scope
+- `index.html`
+- `services.html`
+- `about.html`
+- hero-panel asset `assets/img/hero-excavator-site.webp` and the hero section in that file
+- CSS and JS files
+
+## Anchors the rebuild must preserve exactly
+- The hero section and hero image stay unchanged.
+- The contact panel stays the same structure and content: email line, lead paragraph, "Write to us" action, and the contact list (Email, Physical address, Postal address, Phone, Managing directors).
+- The footer, fact strip, site header, skip link, and contact copy tone stay the same.
+- The contact copy still points at `jmkale2003@hotmail.com` and the Dodoma address/phone facts.
+- The page is still a single self-contained static HTML file with the same stylesheet and script imports.
+
+## Scope of the redesign
+Only the contact page's gallery sections are rebuilt. The old design used the same two-gallery layout twice: both galleries titled "Walls, blocks and rendering", both with the same six generic contractor photos repeated. That reads as a placeholder, not a contact page.
+
+The rebuilt page replaces both galleries with a single contact-tied sequence built from the eight supplied Pexels construction images. The sequence is the "why bother contacting us" proof: real-looking site work, so a prospective customer can see the kind of job the contractor actually does before they write the email.
+
+## Image inventory
+All eight are stored as WebP under `assets/img/`, named by the Pexels photo id:
+
+1. `assets/img/pexels-13319078.webp`
+2. `assets/img/pexels-35641136.webp`
+3. `assets/img/pexels-4956914.webp`
+4. `assets/img/pexels-38706741.webp`
+5. `assets/img/pexels-32751450.webp`
+6. `assets/img/pexels-39356833.webp`
+7. `assets/img/pexels-8586035.webp`
+8. `assets/img/pexels-39576121.webp`
+
+Source URLs (for reference only; not embedded as links):
+
+- https://images.pexels.com/photos/13319078/pexels-photo-13319078.jpeg
+- https://images.pexels.com/photos/4956914/pexels-photo-4956914.jpeg
+- https://images.pexels.com/photos/35641136/pexels-photo-35641136.jpeg
+- https://images.pexels.com/photos/38706741/pexels-photo-38706741.jpeg
+- https://images.pexels.com/photos/32751450/pexels-photo-32751450.jpeg
+- https://images.pexels.com/photos/39356833/pexels-photo-39356833.jpeg
+- https://images.pexels.com/photos/8586035/pexels-photo-8586035.jpeg
+- https://images.pexels.com/photos/39576121/pexels-photo-39576121.jpeg
+- https://www.pexels.com/photo/construction-worker-on-scaffolding-at-work-38706741/
+
+Note: the short `pexels.com/photo/...38706741/` reference points to the same photo as `pexels-38706741.webp`. It is not a separate image.
+
+## Read of the supplied images
+These eight images are the contact page's proof set. Through the user's supplied links, the set reads as a working building and civil site rather than a tidy finished home. That is intentional for a contact page: it should show the kind of work the customer is asking about, not a sales decoration.
+
+Computed reading of each image:
+
+- `pexels-13319078` — site setting out / early earthworks feel. Open site, equipment or crew present, the "before the walls go up" part of a job.
+- `pexels-35641136` — larger construction activity, mid-job site. Reads as the busy middle of a build.
+- `pexels-4956914` — building work in progress, the actual structure stage rather than preliminaries.
+- `pexels-38706741` — worker on scaffolding. Higher-risk, higher-skill part of the job; good contact-page proof that the site is actively managed.
+- `pexels-32751450` — human-at-work detail, construction activity close to the subject. Good for the "real people doing the work" part of the contact story.
+- `pexels-39356833` — additional on-site construction scene. Supports the same contact-page argument as the others.
+- `pexels-8586035` — construction site scene, another mid-build view.
+- `pexels-39576121` — another construction site scene; keeps the set feeling like a real sequence rather than a single repeated image.
+
+## Sequence logic
+The contact page should not look like a random image dump. The sequence should read like the customer's journey toward a quotation:
+
+1. First contact image should be the "this is the kind of place we work on" opener.
+2. Then a couple of images that show real on-site activity, including human work where possible.
+3. Then the heaver / higher-risk looking shots — scaffolding, structure, active build — because those are the parts customers are usually nervous about and asking for a quotation to manage.
+4. Then closing images that reinforce that this is an active local contractor's site, not stock decoration.
+
+So the order is not "best image first" but "story first".
+
+## Chosen sequence
+1. `pexels-13319078.webp`
+2. `pexels-35641136.webp`
+3. `pexels-4956914.webp`
+4. `pexels-38706741.webp`
+5. `pexels-32751450.webp`
+6. `pexels-39356833.webp`
+7. `pexels-8586035.webp`
+8. `pexels-39576121.webp`
+
+That is the full eight-image contact sequence.
+
+## Gallery structure
+One gallery band, not two.
+
+- One section, class `section gallery-band`, same wrapper and reveal pattern as the rest of the site.
+- One gallery head: eyebrow "What the work looks like", h2 "Tell us what stage it is at", section-sub that ties the photos to the quotation process.
+- The gallery itself uses the existing `.gallery` container and `.shot.reveal` images, so the contact page keeps the same layout behavior.
+- Eight images, same width/height/decoding pattern as before: `width="900" height="600" loading="lazy" decoding="async"`.
+- Each image gets a specific alt text written for the contact page, not a generic stock caption.
+- No duplicate gallery below it. The second repeated "Walls, blocks and rendering" gallery is removed entirely.
+
+## Alt text plan
+Alt text is written for a contact page, not an image portfolio. Each caption should tell a prospective customer what they are seeing and why it matters to a quotation request.
+
+Planned alt text:
+
+1. `pexels-13319078` — "A working building site at the setting-out and early works stage, before walls are built."
+2. `pexels-35641136` — "Mid-build site activity on a project we would give a written quotation for."
+3. `pexels-4956914` — "Structure and building work in progress on a Jomka-style contract."
+4. `pexels-38706741` — "A worker on scaffolding during the higher-risk stage of the job."
+5. `pexels-32751450` — "Close-up of on-site construction work, the kind of task a quotation covers."
+6. `pexels-39356833` — "Another view of site activity on a live building and civil works project."
+7. `pexels-8586035` — "An active construction site showing the work behind a typical quotation."
+8. `pexels-39576121` — "Final stage of the contact gallery: real site work from a Jomka-style job."
+
+These are deliberate alt texts, not auto-generated. They are written so a screen reader user gets the same contact-page argument as a sighted user: this is real site work, and that is why a quotation matters.
+
+## New contact-page copy for the gallery head
+Old copy was: "The opening stages of most jobs — setting the wall out, laying the blocks, then rendering — so you know what will happen on your plot."
+
+That copy belongs to a gallery titled "Walls, blocks and rendering". The new gallery is not that. It is a contact page proof sequence.
+
+New gallery head:
+
+- Eyebrow: "What the work looks like"
+- h2: "Tell us what stage it is at."
+- section-sub: "If you already know where your job sits — just starting, mid-build, scaffolding, finishes — send that with the plot details. These are the kinds of sites we quote for, so a photo or description of the stage helps us return a complete written quotation faster."
+
+That ties the gallery to the contact panel above it: the gallery is not decoration, it is the visual version of "tell us what you need".
+
+## What must not change
+- Hero section: untouched.
+- Contact panel: untouched.
+- Fact strip: untouched.
+- Footer: untouched.
+- Contact email, phone, address, managing directors: untouched.
+- Any other page: untouched.
+- CSS/JS: untouched.
+
+## Acceptance
+The rebuilt contact page should meet these checks:
+
+1. Hero section is identical to before.
+2. Contact panel, contact list, email line, phone numbers, address, managing directors are unchanged.
+3. The old repeated "Walls, blocks and rendering" galleries are gone.
+4. One contact gallery exists, with the eight images in the chosen order.
+5. Every image loads from `assets/img/` and has a real alt text written for the contact page.
+6. No image on the page points at the old generic contractor photos.
+7. The gallery head copy explains the contact process, not just "walls and blocks".
+8. The rest of the page reads like the same contact page, not a different one.

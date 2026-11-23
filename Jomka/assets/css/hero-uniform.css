@@ -1,0 +1,93 @@
+
+/* ===== Shared hero imagery treatments — same effect on every page ===== */
+
+/* Uniform cover image treatment for hero panels that use <img> as the background panel */
+.hero-media,
+.atmos-hero-media {
+  object-fit: cover;
+  object-position: center 34%;
+  will-change: transform;
+}
+
+/* Keep cover images from leaving handed gaps where the photo is narrower than the panel */
+@media (max-width: 900px) {
+  .hero-media,
+  .atmos-hero-media {
+    object-position: center 28%;
+  }
+}
+
+/* A single adjustable overlay so the text panel has a consistent dark backdrop */
+.hero-overlay,
+.atmos-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(6, 10, 16, 0.32) 0%,
+      rgba(6, 10, 16, 0.36) 42%,
+      rgba(2, 6, 11, 0.55) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(4, 8, 14, 0.50) 0%,
+      rgba(4, 8, 14, 0.32) 58%,
+      rgba(4, 8, 14, 0.20) 100%
+    );
+}
+
+/* Wider left-side shading so the eyebrow + headline + lead always have a darker column */
+.hero-panel::before,
+.atmos-hero::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 34%;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(3, 7, 12, 0.55) 0%, rgba(3, 7, 12, 0) 100%);
+  pointer-events: none;
+}
+
+/* Optional darker mode for hero pages whose photo is especially bright */
+.hero-panel[data-hero-strong],
+.atmos-hero[data-hero-strong] .atmos-hero-overlay {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(3, 6, 10, 0.52) 0%,
+      rgba(3, 6, 10, 0.58) 42%,
+      rgba(1, 4, 8, 0.80) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(2, 5, 10, 0.74) 0%,
+      rgba(2, 5, 10, 0.52) 58%,
+      rgba(2, 5, 10, 0.38) 100%
+    );
+}
+
+.hero-panel[data-hero-strong]::before,
+.atmos-hero[data-hero-strong]::before {
+  width: 46%;
+  background: linear-gradient(90deg, rgba(1, 4, 9, 0.72) 0%, rgba(1, 4, 9, 0) 100%);
+}
+
+.hero-panel[data-hero-strong],
+.atmos-hero[data-hero-strong] {
+  --hero-overlay-alpha: 0.92;
+}
+
+/* Keep copy layers above every overlay and shading element */
+.hero-copy,
+.hero-panel .atmos-head,
+.atmos-hero .hero-copy,
+.atmos-hero .atmos-head {
+  position: relative;
+  z-index: 2;
+}
+

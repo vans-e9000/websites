@@ -1,0 +1,102 @@
+/* ===== Hero photography: large background image, dark gradient, text on top ===== */
+.atmos-hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-bg-canvas);
+}
+
+.atmos-hero-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 34%;
+  z-index: 0;
+  will-change: transform;
+}
+
+/* Readability overlay: one gradient for left text column, one for the right CTA rail */
+.atmos-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    /* left column: keep eyebrow + headline + lead readable against busy site photos */
+    linear-gradient(180deg,
+      rgba(8, 16, 12, 0.34) 0%,
+      rgba(8, 16, 12, 0.20) 38%,
+      rgba(8, 16, 12, 0.20) 56%,
+      rgba(8, 16, 12, 0.58) 100%
+    ),
+    /* horizontal shading strongest on the far left where the copy column sits */
+    linear-gradient(90deg,
+      rgba(8, 16, 12, 0.58) 0%,
+      rgba(8, 16, 12, 0.34) 32%,
+      rgba(8, 16, 12, 0.16) 64%,
+      rgba(8, 16, 12, 0.06) 100%
+    );
+}
+
+/* stronger shade behind the button rail on the right */
+.atmos-hero::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 38%;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(270deg, rgba(8, 16, 12, 0.42) 0%, rgba(8, 16, 12, 0.06) 100%);
+}
+
+/* soft left-edge vignette so the eyebrow/headline reads against busy site photography */
+.atmos-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 30%;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(8, 16, 12, 0.64) 0%, rgba(8, 16, 12, 0.0) 96%);
+}
+
+.atmos-head {
+  position: relative;
+  z-index: 4;
+}
+
+/* Keep hero copy legible on the shaded image */
+.hero-copy {
+  max-width: 68ch;
+  color: var(--color-text-on-media);
+}
+
+.eyebrow,
+.display,
+.lead {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.42);
+}
+
+.btn-primary,
+.btn-ghost {
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.32);
+}
+
+/* Photo-aware cropping on tall tablet screens so the subject stays visible */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .atmos-hero-media { object-position: center 30%; }
+}
+
+@media (max-width: 768px) {
+  .atmos-hero-media { object-position: center 24%; }
+}
+
+@media (max-width: 480px) {
+  .atmos-hero-media { object-position: center 20%; }
+}
+

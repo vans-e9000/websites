@@ -1,0 +1,11 @@
+{
+  "name": "jomka-building-civil",
+  "private": true,
+  "scripts": {
+    "start": "node serve-for-screenshot.js",
+    "check:deploy": "node deploy-check.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.64.1"
+  }
+}

@@ -1,0 +1,33 @@
+[build]
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Keep clean public URLs while preserving the existing multi-page HTML files.
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 301
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 301
+
+# Do not let missing assets silently fall back to a page.
+[[redirects]]
+  from = "/assets/*"
+  to = "/404.html"
+  status = 404
+  force = true
