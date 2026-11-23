@@ -1,0 +1,3 @@
+﻿const toggle = document.querySelector('.menu-button'); const nav = document.querySelector('.nav'); if (toggle && nav) toggle.addEventListener('click',()=>nav.classList.toggle('open'));
+document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>nav?.classList.remove('open')));
+document.querySelectorAll('form').forEach(form=>form.addEventListener('submit',e=>{e.preventDefault(); form.innerHTML='<div class="form-success"><span class="service-icon">✓</span><h3>Message received.</h3><p>Thank you for reaching out. Our team will review your brief and contact you within one working day.</p><a class="button dark" href="index.html">Back to home ↗</a></div>'}));

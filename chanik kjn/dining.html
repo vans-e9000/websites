@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Milo — Dining &amp; Restaurants | Chanika Kijani, Dar es Salaam</title>
+<meta name="description" content="Taste real Tanzania at Chanika Kijani — Kijani Bistro, Botanical Café and Madafu Bar. Swahili dishes, fresh coconuts and farm-to-table menus priced in TZS."/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥥</text></svg>"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script src="assets/tailwind-config.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/styles.css"/>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+</head>
+<body data-page="dining" class="antialiased overflow-x-clip">
+<script src="assets/site.js"></script>
+
+<main>
+<!-- ============ HERO ============ -->
+<header id="nyumbani" class="relative h-[100svh] min-h-[640px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0 overflow-hidden">
+        <img class="hero-bg w-full h-full object-cover scale-[1.18]" alt="Warm restaurant interior"
+             src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600&q=80"/>
+        <div class="absolute inset-0 bg-gradient-to-b from-deep-emerald/60 via-deep-emerald/20 to-deep-emerald/80"></div>
+        <span class="material-symbols-outlined floaty absolute top-[16%] right-[7%] text-white/10 text-9xl rotate-12">restaurant</span>
+        <span class="material-symbols-outlined floaty absolute bottom-[22%] left-[6%] text-white/10 text-7xl -rotate-12" style="animation-delay:-3s">local_cafe</span>
+    </div>
+
+    <div data-hero-content class="relative z-10 text-center px-6 max-w-5xl mx-auto">
+        <p class="text-gold-2 text-xs md:text-sm font-bold uppercase tracking-[0.5em] mb-6">
+            <span class="line-mask"><span data-hero-eyebrow class="line-inner">Karibu — Milo ya Kiasili</span></span>
+        </p>
+        <h1 class="font-display text-white font-light leading-[0.98] text-[clamp(3rem,9vw,7.5rem)] mb-8 drop-shadow-2xl">
+            <span class="block"><span data-split>Taste the</span></span>
+            <span class="block italic text-gold-2"><span data-split>Real</span></span>
+            <span class="block"><span data-split>Tanzania</span></span>
+        </h1>
+        <p data-hero-sub class="text-white/85 text-lg md:text-2xl mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+            From street-style chipsi mayai to plated Swahili fine dining — three kitchens celebrating
+            the flavors of the coast, the highlands, and the Indian Ocean.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            <a data-hero-cta href="#wasiliana" class="magnetic emerald-gradient text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest hero-shadow">Reserve a Table</a>
+            <a data-hero-cta href="#menu" class="magnetic glass-panel text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest border border-white/30 hover:bg-white/15 transition-colors">Explore the Menu</a>
+        </div>
+        <p data-hero-meta class="mt-12 text-white/60 text-xs uppercase tracking-[0.3em] font-light">
+            3 Restaurants <span class="text-gold">✦</span> Farm-to-Table <span class="text-gold">✦</span> Open Daily
+        </p>
+    </div>
+
+    <div class="scroll-hint absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
+        <span class="text-white/50 text-[10px] uppercase tracking-[0.4em]">Tembeza</span>
+        <span class="material-symbols-outlined text-gold-2 animate-bounce">expand_more</span>
+    </div>
+</header>
+
+<!-- ============ SWAHILI MARQUEE ============ -->
+<div class="kanga-stripes h-2"></div>
+<div class="bg-deep-emerald py-6 overflow-hidden border-b border-gold/10">
+    <div class="marquee-track text-2xl md:text-3xl font-display text-gold-2/90 italic">
+        <div class="flex items-center gap-12 pr-12 whitespace-nowrap">
+            <span>Pilau</span><span class="text-terra">✦</span>
+            <span>Mishkaki</span><span class="text-terra">✦</span>
+            <span>Chipsi</span><span class="text-terra">✦</span>
+            <span>Madafu</span><span class="text-terra">✦</span>
+            <span>Nyama</span><span class="text-terra">✦</span>
+            <span>Uji</span><span class="text-terra">✦</span>
+            <span>Karibu</span><span class="text-terra">✦</span>
+        </div>
+        <div class="flex items-center gap-12 pr-12 whitespace-nowrap">
+            <span>Pilau</span><span class="text-terra">✦</span>
+            <span>Mishkaki</span><span class="text-terra">✦</span>
+            <span>Chipsi</span><span class="text-terra">✦</span>
+            <span>Madafu</span><span class="text-terra">✦</span>
+            <span>Nyama</span><span class="text-terra">✦</span>
+            <span>Uji</span><span class="text-terra">✦</span>
+            <span>Karibu</span><span class="text-terra">✦</span>
+        </div>
+    </div>
+</div>
+
+<!-- ============ INTRO + STATS ============ -->
+<section id="hadithi" class="py-28 md:py-40 px-6 bg-sand relative overflow-hidden">
+    <div class="absolute -left-24 top-20 opacity-[0.06] pointer-events-none">
+        <span class="material-symbols-outlined text-[26rem] text-emerald">restaurant</span>
+    </div>
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
+        <div>
+            <p class="script-quote text-5xl text-terra mb-4" data-reveal>Milo</p>
+            <h2 class="font-display text-4xl md:text-6xl text-deep-emerald leading-[1.05] mb-8" data-reveal data-delay="0.05">
+                From Our Gardens to Your <span class="italic text-emerald">Plate</span>
+            </h2>
+            <p class="text-ink/70 text-xl leading-[1.8] font-light mb-6" data-reveal data-delay="0.1">
+                Our chefs grow herbs, fruits and spices right in the gardens. Coconut milk is pressed
+                fresh each morning, and firewood for the mishkaki is lit at noon. This is food the
+                way Tanzania tastes — honest, generous, and full of flavor.
+            </p>
+            <p class="text-ink/70 text-xl leading-[1.8] font-light mb-12" data-reveal data-delay="0.15">
+                Whether it's a sundowner over the lawns, a business lunch, or a family dinner after a
+                day at the park, there's a table waiting for you — with a madafu in hand.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8" data-reveal data-delay="0.2">
+                <div>
+                    <p class="font-display text-4xl md:text-5xl text-emerald"><span data-count="3" data-suffix="">0</span></p>
+                    <p class="text-ink/50 text-xs uppercase tracking-[0.2em] mt-1">Restaurants &amp; Cafés</p>
+                </div>
+                <div>
+                    <p class="font-display text-4xl md:text-5xl text-emerald"><span data-count="120" data-suffix="+">0</span></p>
+                    <p class="text-ink/50 text-xs uppercase tracking-[0.2em] mt-1">Dishes</p>
+                </div>
+                <div>
+                    <p class="font-display text-4xl md:text-5xl text-emerald"><span data-count="300" data-suffix="">0</span></p>
+                    <p class="text-ink/50 text-xs uppercase tracking-[0.2em] mt-1">Seats Across Venues</p>
+                </div>
+                <div>
+                    <p class="font-display text-4xl md:text-5xl text-emerald"><span data-count="4.9" data-suffix="★">0</span></p>
+                    <p class="text-ink/50 text-xs uppercase tracking-[0.2em] mt-1">Guest Rating</p>
+                </div>
+            </div>
+        </div>
+        <div class="relative">
+            <div data-clip class="relative rounded-[3rem] overflow-hidden botanical-shadow h-[420px] md:h-[560px]">
+                <img data-parallax="12" class="w-full h-full object-cover" alt="Swahili fine dining plate"
+                     src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600&q=80"/>
+            </div>
+            <div data-clip class="absolute -bottom-10 -left-6 md:-left-12 w-56 md:w-72 h-64 md:h-80 rounded-[2.5rem] overflow-hidden border-8 border-sand botanical-shadow">
+                <img data-parallax="18" class="w-full h-full object-cover" alt="Fresh food spread"
+                     src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=1600&q=80"/>
+            </div>
+            <div class="absolute -top-8 -right-4 w-28 h-28 bg-gold/20 rounded-full blur-2xl"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ RESTAURANTS ============ -->
+<section id="milo" class="py-28 md:py-40 px-6 bg-white relative overflow-hidden">
+    <div class="absolute -right-28 bottom-0 opacity-[0.05] pointer-events-none">
+        <span class="material-symbols-outlined text-[30rem] text-emerald">table_restaurant</span>
+    </div>
+    <div class="max-w-7xl mx-auto relative z-10">
+        <div class="text-center mb-20">
+            <p class="script-quote text-5xl text-terra mb-3" data-reveal>Mahali pa Kula</p>
+            <h2 class="font-display text-4xl md:text-6xl text-deep-emerald mb-6" data-reveal data-delay="0.05">Our Restaurants</h2>
+            <p class="text-ink/55 italic text-xl max-w-2xl mx-auto" data-reveal data-delay="0.1">
+                Three spaces, three moods — all under one botanical roof.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-stretch">
+            <div class="pkg-card bg-sand rounded-[2.5rem] overflow-hidden border border-gold/15 shadow-sm flex flex-col" data-reveal>
+                <div class="h-64 overflow-hidden relative">
+                    <img class="w-full h-full object-cover transition-transform duration-1000 hover:scale-110" alt="Kijani Bistro plated dishes"
+                         src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600&q=80"/>
+                    <div class="absolute top-6 left-6 bg-terra text-white text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">Inapendwa</div>
+                </div>
+                <div class="p-9 flex flex-col flex-grow">
+                    <p class="text-gold font-bold uppercase tracking-[0.3em] text-[10px] mb-2">Swahili Fine Dining</p>
+                    <h3 class="font-display text-3xl text-deep-emerald mb-3">Kijani Bistro</h3>
+                    <p class="text-ink/60 text-base font-light leading-relaxed mb-8">Plated coastal cuisine with a garden view — pilau, coconut fish, and a chef's tasting menu that tells Tanzania's story.</p>
+                    <div class="mt-auto flex items-center gap-3 text-sm text-ink/60">
+                        <span class="material-symbols-outlined text-emerald">schedule</span> 12:00 – 22:00
+                    </div>
+                </div>
+            </div>
+
+            <div class="pkg-card bg-sand rounded-[2.5rem] overflow-hidden border border-gold/15 shadow-sm flex flex-col lg:mt-10" data-reveal data-delay="0.1">
+                <div class="h-64 overflow-hidden relative">
+                    <img class="w-full h-full object-cover transition-transform duration-1000 hover:scale-110" alt="Botanical Café"
+                         src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1600&q=80"/>
+                </div>
+                <div class="p-9 flex flex-col flex-grow">
+                    <p class="text-gold font-bold uppercase tracking-[0.3em] text-[10px] mb-2">Garden Terrace</p>
+                    <h3 class="font-display text-3xl text-deep-emerald mb-3">Botanical Café</h3>
+                    <p class="text-ink/60 text-base font-light leading-relaxed mb-8">Light bites, Tanzanian coffee, cakes and iced tea among the flowerbeds — the perfect garden pause.</p>
+                    <div class="mt-auto flex items-center gap-3 text-sm text-ink/60">
+                        <span class="material-symbols-outlined text-emerald">schedule</span> 7:00 – 18:00
+                    </div>
+                </div>
+            </div>
+
+            <div class="pkg-card bg-sand rounded-[2.5rem] overflow-hidden border border-gold/15 shadow-sm flex flex-col" data-reveal data-delay="0.2">
+                <div class="h-64 overflow-hidden relative">
+                    <img class="w-full h-full object-cover transition-transform duration-1000 hover:scale-110" alt="Madafu Bar coconuts and cocktails"
+                         src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=1600&q=80"/>
+                </div>
+                <div class="p-9 flex flex-col flex-grow">
+                    <p class="text-gold font-bold uppercase tracking-[0.3em] text-[10px] mb-2">Fresh Coconut Bar</p>
+                    <h3 class="font-display text-3xl text-deep-emerald mb-3">Madafu Bar</h3>
+                    <p class="text-ink/60 text-base font-light leading-relaxed mb-8">Young coconuts cut to order, fresh fruit juices, and sunset cocktails over the lawns and the Baobab Lawn.</p>
+                    <div class="mt-auto flex items-center gap-3 text-sm text-ink/60">
+                        <span class="material-symbols-outlined text-emerald">schedule</span> 10:00 – 23:00
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ MENU ============ -->
+<section id="menu" class="py-28 md:py-40 px-6 bg-sand relative overflow-hidden">
+    <div class="absolute -left-24 top-32 opacity-[0.05] pointer-events-none">
+        <span class="material-symbols-outlined text-[26rem] text-emerald">menu_book</span>
+    </div>
+    <div class="max-w-6xl mx-auto relative z-10">
+        <div class="text-center mb-20">
+            <p class="script-quote text-5xl text-terra mb-3" data-reveal>Menyu</p>
+            <h2 class="font-display text-4xl md:text-6xl text-deep-emerald mb-6" data-reveal data-delay="0.05">Signature Dishes</h2>
+            <p class="text-ink/55 italic text-xl max-w-2xl mx-auto" data-reveal data-delay="0.1">
+                Prices in Tanzanian Shillings (TZS). Cooked to order, served with a smile.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-3xl p-8 flex items-center justify-between gap-6 border border-gold/15 shadow-sm" data-reveal>
+                <div class="flex items-center gap-5">
+                    <span class="material-symbols-outlined text-emerald text-4xl shrink-0">rice_bowl</span>
+                    <div>
+                        <h3 class="font-display text-2xl text-deep-emerald">Pilau ya Nyama</h3>
+                        <p class="text-ink/55 font-light">Spiced beef pilau, kachumbari</p>
+                    </div>
+                </div>
+                <span class="font-display text-2xl text-terra whitespace-nowrap">TZS 18,000</span>
+            </div>
+
+            <div class="bg-white rounded-3xl p-8 flex items-center justify-between gap-6 border border-gold/15 shadow-sm" data-reveal data-delay="0.05">
+                <div class="flex items-center gap-5">
+                    <span class="material-symbols-outlined text-emerald text-4xl shrink-0">outdoor_grill</span>
+                    <div>
+                        <h3 class="font-display text-2xl text-deep-emerald">Mishkaki Platter</h3>
+                        <p class="text-ink/55 font-light">Charcoal skewers, chili sauce, chips</p>
+                    </div>
+                </div>
+                <span class="font-display text-2xl text-terra whitespace-nowrap">TZS 25,000</span>
+            </div>
+
+            <div class="bg-white rounded-3xl p-8 flex items-center justify-between gap-6 border border-gold/15 shadow-sm" data-reveal data-delay="0.1">
+                <div class="flex items-center gap-5">
+                    <span class="material-symbols-outlined text-emerald text-4xl shrink-0">egg_alt</span>
+                    <div>
+                        <h3 class="font-display text-2xl text-deep-emerald">Chipsi Mayai</h3>
+                        <p class="text-ink/55 font-light">The famous egg-chip omelette, street style</p>
+                    </div>
+                </div>
+                <span class="font-display text-2xl text-terra whitespace-nowrap">TZS 8,000</span>
+            </div>
+
+            <div class="bg-white rounded-3xl p-8 flex items-center justify-between gap-6 border border-gold/15 shadow-sm" data-reveal data-delay="0.15">
+                <div class="flex items-center gap-5">
+                    <span class="material-symbols-outlined text-emerald text-4xl shrink-0">skillet</span>
+                    <div>
+                        <h3 class="font-display text-2xl text-deep-emerald">Nyama Choma</h3>
+                        <p class="text-ink/55 font-light">Grilled goat, kachumbari, ugali</p>
+                    </div>
+                </div>
+                <span class="font-display text-2xl text-terra whitespace-nowrap">TZS 35,000</span>
+            </div>
+
+            <div class="bg-white rounded-3xl p-8 flex items-center justify-between gap-6 border border-gold/15 shadow-sm" data-reveal data-delay="0.2">
+                <div class="flex items-center gap-5">
+                    <span class="material-symbols-outlined text-emerald text-4xl shrink-0">bakery_dining</span>
+                    <div>
+                        <h3 class="font-display text-2xl text-deep-emerald">Ndizi Kaanga</h3>
+                        <p class="text-ink/55 font-light">Fried plantains, honey drizzle</p>
+                    </div>
+                </div>
+                <span class="font-display text-2xl text-terra whitespace-nowrap">TZS 7,000</span>
+            </div>
+
+            <div class="bg-white rounded-3xl p-8 flex items-center justify-between gap-6 border border-gold/15 shadow-sm" data-reveal data-delay="0.25">
+                <div class="flex items-center gap-5">
+                    <span class="material-symbols-outlined text-emerald text-4xl shrink-0">set_meal</span>
+                    <div>
+                        <h3 class="font-display text-2xl text-deep-emerald">Samaki wa Kupaka</h3>
+                        <p class="text-ink/55 font-light">Coconut fish, banana leaf, coconut rice</p>
+                    </div>
+                </div>
+                <span class="font-display text-2xl text-terra whitespace-nowrap">TZS 28,000</span>
+            </div>
+
+            <div class="bg-white rounded-3xl p-8 flex items-center justify-between gap-6 border border-gold/15 shadow-sm" data-reveal data-delay="0.3">
+                <div class="flex items-center gap-5">
+                    <span class="material-symbols-outlined text-emerald text-4xl shrink-0">local_cafe</span>
+                    <div>
+                        <h3 class="font-display text-2xl text-deep-emerald">Uji wa Mtama</h3>
+                        <p class="text-ink/55 font-light">Millet porridge, honey, banana</p>
+                    </div>
+                </div>
+                <span class="font-display text-2xl text-terra whitespace-nowrap">TZS 6,000</span>
+            </div>
+
+            <div class="bg-white rounded-3xl p-8 flex items-center justify-between gap-6 border border-gold/15 shadow-sm" data-reveal data-delay="0.35">
+                <div class="flex items-center gap-5">
+                    <span class="material-symbols-outlined text-emerald text-4xl shrink-0">water_full</span>
+                    <div>
+                        <h3 class="font-display text-2xl text-deep-emerald">Madafu Baridi</h3>
+                        <p class="text-ink/55 font-light">Fresh young coconut, ice cold</p>
+                    </div>
+                </div>
+                <span class="font-display text-2xl text-terra whitespace-nowrap">TZS 5,000</span>
+            </div>
+        </div>
+        <p class="text-center text-ink/45 text-sm italic mt-12" data-reveal>
+            Vegetarian, halal and kids' menus available. Ask about private dining in the Swahili Courtyard.
+        </p>
+    </div>
+</section>
+
+<!-- ============ RESERVATION BAND ============ -->
+<section id="wasiliana" class="emerald-gradient py-24 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 floral-dots opacity-[0.08] pointer-events-none"></div>
+    <div class="max-w-6xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div data-reveal>
+            <p class="script-quote text-5xl text-gold-2 mb-4">Hifadhi Meza</p>
+            <h2 class="font-display text-4xl md:text-5xl text-white mb-6">Reserve a Table</h2>
+            <p class="text-white/70 text-xl font-light leading-relaxed mb-8">
+                For weddings, corporate lunches, or a quiet dinner among the flowers —
+                call, WhatsApp, or email us and we'll have the madafu ready.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="https://wa.me/255754123456" target="_blank" rel="noopener"
+                   class="magnetic inline-flex items-center justify-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest shadow-xl">
+                    <span class="material-symbols-outlined">chat</span> WhatsApp
+                </a>
+                <a href="mailto:events@chanikakijani.co.tz"
+                   class="magnetic inline-flex items-center justify-center gap-3 glass-panel text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest border border-white/30 hover:bg-white/15 transition-colors">
+                    <span class="material-symbols-outlined">mail</span> Email Us
+                </a>
+            </div>
+        </div>
+        <div class="glass-panel rounded-[2rem] p-10 space-y-6" data-reveal data-delay="0.1">
+            <div class="flex items-center gap-5">
+                <div class="w-14 h-14 rounded-full glass-panel flex items-center justify-center"><span class="material-symbols-outlined text-gold">call</span></div>
+                <div><span class="block text-[10px] uppercase tracking-widest opacity-60">Piga Simu</span><span class="text-xl font-display">+255 754 123 456</span></div>
+            </div>
+            <div class="flex items-center gap-5">
+                <div class="w-14 h-14 rounded-full glass-panel flex items-center justify-center"><span class="material-symbols-outlined text-gold">schedule</span></div>
+                <div><span class="block text-[10px] uppercase tracking-widest opacity-60">Saa / Hours</span><span class="text-xl font-display">10:00 AM — 11:00 PM Daily</span></div>
+            </div>
+            <div class="flex items-center gap-5">
+                <div class="w-14 h-14 rounded-full glass-panel flex items-center justify-center"><span class="material-symbols-outlined text-gold">location_on</span></div>
+                <div><span class="block text-[10px] uppercase tracking-widest opacity-60">Tupo Wapi</span><span class="text-xl font-display">Chanika, Dar es Salaam</span></div>
+            </div>
+            <p class="pt-4 border-t border-white/10 script-quote text-3xl italic text-gold-2">"Chakula kizuri, watu wazuri."</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="py-24 px-6 bg-white">
+    <div class="max-w-4xl mx-auto text-center" data-reveal>
+        <span class="material-symbols-outlined text-gold text-5xl mb-6">lunch_dining</span>
+        <h2 class="font-display text-4xl md:text-5xl text-deep-emerald mb-6">Stay for Dinner After the Fun</h2>
+        <p class="text-ink/60 text-xl font-light mb-10 max-w-2xl mx-auto">Finish a day at the gardens or the park with pilau and a sunset madafu.</p>
+        <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            <a href="amusement-park.html" class="magnetic emerald-gradient text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest hero-shadow">Visit the Park</a>
+            <a href="index.html#wasiliana" class="magnetic glass-panel !bg-deep-emerald/5 !border-emerald/20 text-deep-emerald px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest border transition-colors">Plan an Event</a>
+        </div>
+    </div>
+</section>
+</main>
+</body>
+</html>

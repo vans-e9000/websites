@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Burudani — Amusement Park | Chanika Kijani, Dar es Salaam</title>
+<meta name="description" content="Chanika Kijani Amusement Park — ferris wheel, roller coaster, water park, kids' zone and more in Dar es Salaam. Day, family and VIP passes priced in TZS."/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎡</text></svg>"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script src="assets/tailwind-config.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/styles.css"/>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+</head>
+<body data-page="park" class="antialiased overflow-x-clip">
+<script src="assets/site.js"></script>
+
+<main>
+<!-- ============ HERO ============ -->
+<header id="nyumbani" class="relative h-[100svh] min-h-[640px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0 overflow-hidden">
+        <img class="hero-bg w-full h-full object-cover scale-[1.18]" alt="Ferris wheel at dusk"
+             src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1600&q=80"/>
+        <div class="absolute inset-0 bg-gradient-to-b from-deep-emerald/60 via-deep-emerald/20 to-deep-emerald/80"></div>
+        <span class="material-symbols-outlined floaty absolute top-[16%] right-[7%] text-white/10 text-9xl rotate-12">toys_fan</span>
+        <span class="material-symbols-outlined floaty absolute bottom-[22%] left-[6%] text-white/10 text-7xl -rotate-12" style="animation-delay:-3s">celebration</span>
+    </div>
+
+    <div data-hero-content class="relative z-10 text-center px-6 max-w-5xl mx-auto">
+        <p class="text-gold-2 text-xs md:text-sm font-bold uppercase tracking-[0.5em] mb-6">
+            <span class="line-mask"><span data-hero-eyebrow class="line-inner">Karibu — Furaha kwa Wote</span></span>
+        </p>
+        <h1 class="font-display text-white font-light leading-[0.98] text-[clamp(3rem,9vw,7.5rem)] mb-8 drop-shadow-2xl">
+            <span class="block"><span data-split>Where Adventure</span></span>
+            <span class="block italic text-gold-2"><span data-split>Blooms</span></span>
+            <span class="block"><span data-split>In Green</span></span>
+        </h1>
+        <p data-hero-sub class="text-white/85 text-lg md:text-2xl mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+            Fifteen-plus rides, a giant ferris wheel, a splash-tastic water park and a kids' cove —
+            all woven into the gardens' emerald heart, right here in Dar es Salaam.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            <a data-hero-cta href="#tiketi" class="magnetic emerald-gradient text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest hero-shadow">Buy Tickets</a>
+            <a data-hero-cta href="#vituo" class="magnetic glass-panel text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest border border-white/30 hover:bg-white/15 transition-colors">Explore the Rides</a>
+        </div>
+        <p data-hero-meta class="mt-12 text-white/60 text-xs uppercase tracking-[0.3em] font-light">
+            15+ Rides <span class="text-gold">✦</span> Open 9AM–10PM <span class="text-gold">✦</span> All Ages
+        </p>
+    </div>
+
+    <div class="scroll-hint absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
+        <span class="text-white/50 text-[10px] uppercase tracking-[0.4em]">Tembeza</span>
+        <span class="material-symbols-outlined text-gold-2 animate-bounce">expand_more</span>
+    </div>
+</header>
+
+<!-- ============ SWAHILI MARQUEE ============ -->
+<div class="kanga-stripes h-2"></div>
+<div class="bg-deep-emerald py-6 overflow-hidden border-b border-gold/10">
+    <div class="marquee-track text-2xl md:text-3xl font-display text-gold-2/90 italic">
+        <div class="flex items-center gap-12 pr-12 whitespace-nowrap">
+            <span>Furaha</span><span class="text-terra">✦</span>
+            <span>Tairi</span><span class="text-terra">✦</span>
+            <span>Maji</span><span class="text-terra">✦</span>
+            <span>Watoto</span><span class="text-terra">✦</span>
+            <span>Nyota</span><span class="text-terra">✦</span>
+            <span>Burudani</span><span class="text-terra">✦</span>
+            <span>Karibu</span><span class="text-terra">✦</span>
+        </div>
+        <div class="flex items-center gap-12 pr-12 whitespace-nowrap">
+            <span>Furaha</span><span class="text-terra">✦</span>
+            <span>Tairi</span><span class="text-terra">✦</span>
+            <span>Maji</span><span class="text-terra">✦</span>
+            <span>Watoto</span><span class="text-terra">✦</span>
+            <span>Nyota</span><span class="text-terra">✦</span>
+            <span>Burudani</span><span class="text-terra">✦</span>
+            <span>Karibu</span><span class="text-terra">✦</span>
+        </div>
+    </div>
+</div>
+
+<!-- ============ INTRO + STATS ============ -->
+<section id="hadithi" class="py-28 md:py-40 px-6 bg-sand relative overflow-hidden">
+    <div class="absolute -left-24 top-20 opacity-[0.06] pointer-events-none">
+        <span class="material-symbols-outlined text-[26rem] text-emerald">toys_fan</span>
+    </div>
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
+        <div>
+            <p class="script-quote text-5xl text-terra mb-4" data-reveal>Burudani</p>
+            <h2 class="font-display text-4xl md:text-6xl text-deep-emerald leading-[1.05] mb-8" data-reveal data-delay="0.05">
+                Six Acres of <span class="italic text-emerald">Pure Furaha</span>
+            </h2>
+            <p class="text-ink/70 text-xl leading-[1.8] font-light mb-6" data-reveal data-delay="0.1">
+                From the heart-stopping Wind Rider coaster to a lazy splash in the lagoon, our
+                park is designed for every age — toddlers in the Kids' Cove, adrenaline seekers
+                on the coasters, and sunset romantics on the Star Wheel.
+            </p>
+            <p class="text-ink/70 text-xl leading-[1.8] font-light mb-12" data-reveal data-delay="0.15">
+                When night falls, the park glows — fairy lights, food stalls serving chipsi mayai
+                and mishkaki, and the skyline of Dar twinkling from the top of the wheel.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8" data-reveal data-delay="0.2">
+                <div>
+                    <p class="font-display text-4xl md:text-5xl text-emerald"><span data-count="15" data-suffix="+">0</span></p>
+                    <p class="text-ink/50 text-xs uppercase tracking-[0.2em] mt-1">Rides &amp; Attractions</p>
+                </div>
+                <div>
+                    <p class="font-display text-4xl md:text-5xl text-emerald"><span data-count="6" data-suffix="">0</span></p>
+                    <p class="text-ink/50 text-xs uppercase tracking-[0.2em] mt-1">Acres of Fun</p>
+                </div>
+                <div>
+                    <p class="font-display text-4xl md:text-5xl text-emerald"><span data-count="1200" data-suffix="+">0</span></p>
+                    <p class="text-ink/50 text-xs uppercase tracking-[0.2em] mt-1">Daily Visitors</p>
+                </div>
+                <div>
+                    <p class="font-display text-4xl md:text-5xl text-emerald"><span data-count="4" data-suffix="">0</span></p>
+                    <p class="text-ink/50 text-xs uppercase tracking-[0.2em] mt-1">Themed Zones</p>
+                </div>
+            </div>
+        </div>
+        <div class="relative">
+            <div data-clip class="relative rounded-[3rem] overflow-hidden botanical-shadow h-[420px] md:h-[560px]">
+                <img data-parallax="12" class="w-full h-full object-cover" alt="Roller coaster"
+                     src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=1600&q=80"/>
+            </div>
+            <div data-clip class="absolute -bottom-10 -left-6 md:-left-12 w-56 md:w-72 h-64 md:h-80 rounded-[2.5rem] overflow-hidden border-8 border-sand botanical-shadow">
+                <img data-parallax="18" class="w-full h-full object-cover" alt="Water park fun"
+                     src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=1600&q=80"/>
+            </div>
+            <div class="absolute -top-8 -right-4 w-28 h-28 bg-gold/20 rounded-full blur-2xl"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ ATTRACTIONS ============ -->
+<section id="vituo" class="py-28 md:py-40 px-6 bg-white relative overflow-hidden">
+    <div class="absolute -right-28 bottom-0 opacity-[0.05] pointer-events-none">
+        <span class="material-symbols-outlined text-[30rem] text-emerald">attractions</span>
+    </div>
+    <div class="max-w-7xl mx-auto relative z-10">
+        <div class="text-center mb-20">
+            <p class="script-quote text-5xl text-terra mb-3" data-reveal>Vituo</p>
+            <h2 class="font-display text-4xl md:text-6xl text-deep-emerald mb-6" data-reveal data-delay="0.05">The Rides &amp; Attractions</h2>
+            <p class="text-ink/55 italic text-xl max-w-2xl mx-auto" data-reveal data-delay="0.1">
+                Something for every thrill level — from gentle spins to full loops.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+            <div class="pkg-card bg-sand rounded-[2.5rem] overflow-hidden border border-gold/15 shadow-sm" data-reveal>
+                <div class="h-64 overflow-hidden relative">
+                    <img class="w-full h-full object-cover transition-transform duration-1000 hover:scale-110" alt="Star Wheel ferris wheel"
+                         src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1600&q=80"/>
+                </div>
+                <div class="p-8">
+                    <p class="text-gold font-bold uppercase tracking-[0.3em] text-[10px] mb-2">Tairi Kubwa</p>
+                    <h3 class="font-display text-2xl text-deep-emerald mb-3">Star Wheel</h3>
+                    <p class="text-ink/60 text-base font-light leading-relaxed">Our 60-metre ferris wheel with Indian Ocean views — magical at sunset.</p>
+                </div>
+            </div>
+
+            <div class="pkg-card bg-sand rounded-[2.5rem] overflow-hidden border border-gold/15 shadow-sm lg:mt-10" data-reveal data-delay="0.1">
+                <div class="h-64 overflow-hidden relative">
+                    <img class="w-full h-full object-cover transition-transform duration-1000 hover:scale-110" alt="Wind Rider roller coaster"
+                         src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=1600&q=80"/>
+                </div>
+                <div class="p-8">
+                    <p class="text-gold font-bold uppercase tracking-[0.3em] text-[10px] mb-2">Gari la Upepo</p>
+                    <h3 class="font-display text-2xl text-deep-emerald mb-3">Wind Rider</h3>
+                    <p class="text-ink/60 text-base font-light leading-relaxed">Inversions, camelbacks and treetop turns for true thrill-seekers.</p>
+                </div>
+            </div>
+
+            <div class="pkg-card bg-sand rounded-[2.5rem] overflow-hidden border border-gold/15 shadow-sm" data-reveal data-delay="0.15">
+                <div class="h-64 overflow-hidden relative">
+                    <img class="w-full h-full object-cover transition-transform duration-1000 hover:scale-110" alt="Splash Lagoon water park"
+                         src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=1600&q=80"/>
+                </div>
+                <div class="p-8">
+                    <p class="text-gold font-bold uppercase tracking-[0.3em] text-[10px] mb-2">Chemchemi ya Maji</p>
+                    <h3 class="font-display text-2xl text-deep-emerald mb-3">Splash Lagoon</h3>
+                    <p class="text-ink/60 text-base font-light leading-relaxed">Twisting slides, a wave pool and a lazy river to cool off in.</p>
+                </div>
+            </div>
+
+            <div class="pkg-card bg-sand rounded-[2.5rem] overflow-hidden border border-gold/15 shadow-sm lg:-mt-10" data-reveal data-delay="0.2">
+                <div class="h-64 overflow-hidden relative">
+                    <img class="w-full h-full object-cover transition-transform duration-1000 hover:scale-110" alt="Kids Cove playground"
+                         src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=1600&q=80"/>
+                </div>
+                <div class="p-8">
+                    <p class="text-gold font-bold uppercase tracking-[0.3em] text-[10px] mb-2">Kona ya Watoto</p>
+                    <h3 class="font-display text-2xl text-deep-emerald mb-3">Kids' Cove</h3>
+                    <p class="text-ink/60 text-base font-light leading-relaxed">Soft-play, mini cars, a gentle carousel and face painting.</p>
+                </div>
+            </div>
+
+            <div class="pkg-card bg-sand rounded-[2.5rem] overflow-hidden border border-gold/15 shadow-sm lg:mt-10" data-reveal data-delay="0.25">
+                <div class="h-64 overflow-hidden relative">
+                    <img class="w-full h-full object-cover transition-transform duration-1000 hover:scale-110" alt="Night rides under fairy lights"
+                         src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1600&q=80"/>
+                </div>
+                <div class="p-8">
+                    <p class="text-gold font-bold uppercase tracking-[0.3em] text-[10px] mb-2">Usiku</p>
+                    <h3 class="font-display text-2xl text-deep-emerald mb-3">Night Flights</h3>
+                    <p class="text-ink/60 text-base font-light leading-relaxed">After-dark rides under a canopy of fairy lights — pure magic.</p>
+                </div>
+            </div>
+
+            <div class="pkg-card bg-sand rounded-[2.5rem] overflow-hidden border border-gold/15 shadow-sm" data-reveal data-delay="0.3">
+                <div class="h-64 overflow-hidden relative">
+                    <img class="w-full h-full object-cover transition-transform duration-1000 hover:scale-110" alt="Game hall arcade"
+                         src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1600&q=80"/>
+                </div>
+                <div class="p-8">
+                    <p class="text-gold font-bold uppercase tracking-[0.3em] text-[10px] mb-2">Ukumbi wa Michezo</p>
+                    <h3 class="font-display text-2xl text-deep-emerald mb-3">Game Hall</h3>
+                    <p class="text-ink/60 text-base font-light leading-relaxed">Arcade classics, air hockey, karaoke booths and prize games.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ TICKETS ============ -->
+<section id="tiketi" class="py-28 md:py-40 px-6 bg-sand relative overflow-hidden">
+    <div class="absolute -right-28 bottom-0 opacity-[0.05] pointer-events-none">
+        <span class="material-symbols-outlined text-[30rem] text-emerald">confirmation_number</span>
+    </div>
+    <div class="max-w-7xl mx-auto relative z-10">
+        <div class="text-center mb-20">
+            <p class="script-quote text-5xl text-terra mb-3" data-reveal>Tiketi</p>
+            <h2 class="font-display text-4xl md:text-6xl text-deep-emerald mb-6" data-reveal data-delay="0.05">Tickets &amp; Passes</h2>
+            <p class="text-ink/55 italic text-xl max-w-2xl mx-auto" data-reveal data-delay="0.1">
+                All prices in Tanzanian Shillings. Pay at the gate or book in advance.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-stretch">
+            <div class="pkg-card bg-white p-12 rounded-[2.5rem] border border-gold/20 flex flex-col items-center text-center shadow-sm" data-reveal>
+                <h3 class="font-display text-3xl text-deep-emerald mb-1">Day Pass</h3>
+                <p class="text-ink/45 italic text-sm mb-8">Tiketi ya Siku</p>
+                <ul class="text-left w-full space-y-5 mb-10">
+                    <li class="flex items-start gap-3 text-sm text-ink/75"><span class="material-symbols-outlined text-emerald">attractions</span> Unlimited rides 9AM – 6PM</li>
+                    <li class="flex items-start gap-3 text-sm text-ink/75"><span class="material-symbols-outlined text-emerald">pool</span> Splash Lagoon access</li>
+                    <li class="flex items-start gap-3 text-sm text-ink/75"><span class="material-symbols-outlined text-emerald">child_care</span> Kids' Cove included</li>
+                </ul>
+                <div class="mt-auto">
+                    <span class="block text-[10px] uppercase tracking-widest text-ink/35 mb-2">Per Person</span>
+                    <span class="block text-4xl font-display text-terra">TZS 25,000</span>
+                    <a href="https://wa.me/255754123456" target="_blank" rel="noopener" class="mt-8 inline-block px-10 py-3 border border-emerald text-emerald rounded-full uppercase text-xs font-bold tracking-[0.2em] hover:bg-emerald hover:text-white transition-all">Nunua</a>
+                </div>
+            </div>
+
+            <div class="pkg-card emerald-gradient p-12 rounded-[2.5rem] flex flex-col items-center text-center shadow-2xl relative lg:-mt-8 lg:mb-8 text-white" data-reveal data-delay="0.1">
+                <div class="absolute top-8 right-8 bg-terra text-white text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">Inapendwa</div>
+                <h3 class="font-display text-4xl text-gold-2 mb-1">Family Pass</h3>
+                <p class="text-white/50 italic text-sm mb-8">Tiketi ya Familia</p>
+                <ul class="text-left w-full space-y-5 mb-10">
+                    <li class="flex items-start gap-3 text-sm text-white/90"><span class="material-symbols-outlined text-gold">family_restroom</span> Up to 5 guests</li>
+                    <li class="flex items-start gap-3 text-sm text-white/90"><span class="material-symbols-outlined text-gold">attractions</span> All zones &amp; rides</li>
+                    <li class="flex items-start gap-3 text-sm text-white/90"><span class="material-symbols-outlined text-gold">lunch_dining</span> Family meal voucher included</li>
+                </ul>
+                <div class="mt-auto">
+                    <span class="block text-[10px] uppercase tracking-widest text-white/35 mb-2">Up to 5 Guests</span>
+                    <span class="block text-5xl font-display text-gold-2">TZS 80,000</span>
+                    <a href="https://wa.me/255754123456" target="_blank" rel="noopener" class="magnetic mt-8 w-full block py-4 bg-gold text-deep-emerald font-bold rounded-full uppercase text-xs tracking-[0.2em] shadow-xl text-center">Nunua Sasa</a>
+                </div>
+            </div>
+
+            <div class="pkg-card bg-white p-12 rounded-[2.5rem] border border-gold/20 flex flex-col items-center text-center shadow-sm" data-reveal data-delay="0.2">
+                <h3 class="font-display text-3xl text-deep-emerald mb-1">VIP Pass</h3>
+                <p class="text-ink/45 italic text-sm mb-8">Tiketi ya Kifalme</p>
+                <ul class="text-left w-full space-y-5 mb-10">
+                    <li class="flex items-start gap-3 text-sm text-ink/75"><span class="material-symbols-outlined text-emerald">rocket_launch</span> Express queue access</li>
+                    <li class="flex items-start gap-3 text-sm text-ink/75"><span class="material-symbols-outlined text-emerald">night_shelter</span> Sky Lounge over the park</li>
+                    <li class="flex items-start gap-3 text-sm text-ink/75"><span class="material-symbols-outlined text-emerald">fastfood</span> Complimentary snacks &amp; drinks</li>
+                </ul>
+                <div class="mt-auto">
+                    <span class="block text-[10px] uppercase tracking-widest text-ink/35 mb-2">Per Person</span>
+                    <span class="block text-4xl font-display text-terra">TZS 60,000</span>
+                    <a href="https://wa.me/255754123456" target="_blank" rel="noopener" class="mt-8 inline-block px-10 py-3 border border-emerald text-emerald rounded-full uppercase text-xs font-bold tracking-[0.2em] hover:bg-emerald hover:text-white transition-all">Nunua</a>
+                </div>
+            </div>
+        </div>
+        <p class="text-center text-ink/45 text-sm italic mt-12" data-reveal>
+            * Combo with the <a href="gardens.html" class="text-terra underline decoration-terra/40 underline-offset-4 hover:text-emerald transition-colors">Botanical Gardens</a> saves 20%. Height restrictions apply on thrill rides — see info below.
+        </p>
+    </div>
+</section>
+
+<!-- ============ INFO BAND ============ -->
+<section class="emerald-gradient py-24 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 floral-dots opacity-[0.08] pointer-events-none"></div>
+    <div class="max-w-6xl mx-auto relative z-10 grid grid-cols-1 md:grid-cols-4 gap-10 text-center">
+        <div data-reveal>
+            <span class="material-symbols-outlined text-gold text-4xl mb-3">schedule</span>
+            <h4 class="font-display text-xl text-white mb-2">Open Daily</h4>
+            <p class="text-white/60 font-light">9:00 AM — 10:00 PM</p>
+        </div>
+        <div data-reveal data-delay="0.1">
+            <span class="material-symbols-outlined text-gold text-4xl mb-3">straighten</span>
+            <h4 class="font-display text-xl text-white mb-2">Height Limit</h4>
+            <p class="text-white/60 font-light">Min 1.2m on thrill rides</p>
+        </div>
+        <div data-reveal data-delay="0.2">
+            <span class="material-symbols-outlined text-gold text-4xl mb-3">local_parking</span>
+            <h4 class="font-display text-xl text-white mb-2">Parking</h4>
+            <p class="text-white/60 font-light">Free on-site parking</p>
+        </div>
+        <div data-reveal data-delay="0.3">
+            <span class="material-symbols-outlined text-gold text-4xl mb-3">medical_services</span>
+            <h4 class="font-display text-xl text-white mb-2">Safety</h4>
+            <p class="text-white/60 font-light">Medical post &amp; lockers</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="py-24 px-6 bg-white">
+    <div class="max-w-4xl mx-auto text-center" data-reveal>
+        <span class="material-symbols-outlined text-gold text-5xl mb-6">celebration</span>
+        <h2 class="font-display text-4xl md:text-5xl text-deep-emerald mb-6">A Day of Furaha Awaits</h2>
+        <p class="text-ink/60 text-xl font-light mb-10 max-w-2xl mx-auto">Bring the whole family — then stay for dinner in the gardens.</p>
+        <div class="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            <a href="dining.html" class="magnetic emerald-gradient text-white px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest hero-shadow">Plan Your Visit</a>
+            <a href="gardens.html" class="magnetic glass-panel !bg-deep-emerald/5 !border-emerald/20 text-deep-emerald px-10 py-4 rounded-full text-sm font-bold uppercase tracking-widest border transition-colors">Explore the Gardens</a>
+        </div>
+    </div>
+</section>
+</main>
+</body>
+</html>

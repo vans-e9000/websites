@@ -1,0 +1,3 @@
+﻿User-agent: *
+Allow: /
+Sitemap: https://mgalangombe.co.tz/sitemap.xml
